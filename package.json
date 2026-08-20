@@ -1,0 +1,8 @@
+{
+  "name": "emerickd",
+  "private": true,
+  "description": "Site statique HTML/CSS/JS — blog cybersécurité & GRC d'Emerick Dushimirimana.",
+  "scripts": {
+    "build": "echo \"Site statique : aucune étape de build nécessaire.\""
+  }
+}
