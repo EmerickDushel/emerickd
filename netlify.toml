@@ -1,0 +1,4 @@
+# Site 100% statique (HTML/CSS/JS) : aucune étape de build nécessaire,
+# on publie directement le contenu du dépôt.
+[build]
+  publish = "."
