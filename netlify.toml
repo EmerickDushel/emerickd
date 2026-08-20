@@ -1,4 +1,8 @@
-# Site 100% statique (HTML/CSS/JS) : aucune étape de build nécessaire,
-# on publie directement le contenu du dépôt.
+# Le dashboard Netlify (hérité de l'ancien site) impose une commande de
+# build ("npm run build") et un dossier de publication ("build/"). Plutôt
+# que de dépendre de la modification de ces réglages dans l'interface,
+# le script "build" (package.json) copie le site statique dans build/,
+# et ce fichier confirme le même dossier de publication.
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "build"

@@ -3,6 +3,6 @@
   "private": true,
   "description": "Site statique HTML/CSS/JS — blog cybersécurité & GRC d'Emerick Dushimirimana.",
   "scripts": {
-    "build": "echo \"Site statique : aucune étape de build nécessaire.\""
+    "build": "rm -rf build && mkdir build && find . -maxdepth 1 -mindepth 1 ! -name build ! -name node_modules ! -name .git -exec cp -r {} build/ \\;"
   }
 }
