@@ -6,3 +6,25 @@
 [build]
   command = "npm run build"
   publish = "build"
+
+# L'ancien site (avant refonte) était indexé par Google sous /blogs/...
+# Ces URLs renvoient un 404 sur le nouveau site : on les redirige en 301
+# vers l'article le plus proche, ou vers la page Blog à défaut, pour ne
+# pas perdre ce référencement déjà acquis et éviter les liens morts.
+[[redirects]]
+  from = "/blogs/conformite-reglementaire/*"
+  to = "/articles/iso27001-smsi-etapes.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blogs/importance-iso-27005-gestion-risques/*"
+  to = "/articles/analyse-risques-cybersecurite.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blogs/*"
+  to = "/blog.html"
+  status = 301
+  force = true
