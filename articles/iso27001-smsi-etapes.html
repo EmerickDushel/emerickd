@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ISO 27001 : les étapes essentielles pour structurer un SMSI - Emerick Dushimirimana</title>
+  <meta name="title" content="ISO 27001 : les étapes essentielles pour structurer un SMSI - Emerick Dushimirimana">
+  <meta name="description"
+    content="Périmètre, analyse de risques, politique de sécurité, contrôles de l'Annexe A : les étapes pour structurer un système de management de la sécurité de l'information.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="ISO 27001 : les étapes essentielles pour structurer un SMSI">
+  <meta property="og:description" content="Les grandes étapes pour structurer un SMSI conforme à l'ISO 27001.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/featured-iso27001-smsi.png">
+  <link rel="canonical" href="https://emerickd.com/articles/iso27001-smsi-etapes.html">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana"></a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a></li>
+          <li><a href="../blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a></li>
+          <li><a href="../about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a></li>
+        </ul>
+
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+            <div>
+              <p class="card-title">Emerick Dushimirimana</p>
+              <p class="card-subtitle">Consultant Cybersécurité &amp; GRC</p>
+            </div>
+          </div>
+          <ul class="link-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a></li>
+            <li><a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a></li>
+          </ul>
+        </div>
+
+        <p class="copyright-text">© 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+      </nav>
+
+      <a href="../index.html#newsletter" class="btn btn-primary">S'abonner</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler><ion-icon name="menu-outline" aria-hidden="true"></ion-icon></button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="section post" aria-labelledby="post-title">
+      <div class="container post-container">
+
+        <div class="post-header">
+
+          <div class="card-tag">
+            <a href="../blog.html" class="span hover-2">#GRC</a>
+            <a href="../blog.html" class="span hover-2">#ISO27001</a>
+          </div>
+
+          <h1 class="headline headline-1 post-title" id="post-title">
+            ISO 27001 : les étapes essentielles pour structurer un SMSI
+          </h1>
+
+          <div class="card-wrapper post-meta">
+            <div class="profile-card">
+              <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+              <div>
+                <p class="card-title">Emerick Dushimirimana</p>
+                <time class="card-subtitle publish-date" datetime="2026-08-12">12 août 2026</time>
+              </div>
+            </div>
+            <div class="wrapper">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span class="span">7 min de lecture</span>
+            </div>
+          </div>
+
+        </div>
+
+        <figure class="post-cover img-holder" style="--width: 1602; --height: 903;">
+          <img src="../assets/images/featured-iso27001-smsi.png" width="1602" height="903"
+            alt="Gouvernance et documentation de la sécurité de l'information" class="img-cover">
+        </figure>
+
+        <div class="post-content">
+
+          <p>
+            Structurer un système de management de la sécurité de l'information (SMSI) conforme à l'ISO
+            27001 peut sembler intimidant lorsqu'on découvre pour la première fois l'ampleur de la norme et
+            le vocabulaire qui l'accompagne. En réalité, la démarche suit une logique assez naturelle, qui
+            devient beaucoup plus claire une fois découpée en étapes concrètes. Cet article présente ces
+            étapes dans l'ordre où elles s'enchaînent naturellement, en expliquant à chaque fois pourquoi
+            elles sont nécessaires et ce qu'elles produisent concrètement.
+          </p>
+
+          <h2 class="headline headline-3">Le principe directeur : le cycle PDCA</h2>
+
+          <p>
+            L'ensemble de la norme repose sur un principe hérité du management de la qualité : le cycle
+            Planifier–Déployer–Contrôler–Améliorer (PDCA, ou Plan-Do-Check-Act). Ce n'est pas un détail
+            théorique : c'est ce qui distingue un SMSI d'une simple liste de mesures de sécurité techniques.
+            Un SMSI n'est jamais un état final atteint une fois pour toutes, mais un processus vivant, qui
+            s'ajuste en continu à mesure que le contexte, les menaces et l'organisation elle-même évoluent.
+            Garder ce cycle en tête aide à comprendre pourquoi chacune des étapes suivantes existe.
+          </p>
+
+          <h2 class="headline headline-3">Étape 1 — Définir le périmètre et le contexte</h2>
+
+          <p>
+            Avant toute chose, il faut délimiter précisément ce que couvre le SMSI : quels processus
+            métiers, quels sites géographiques, quels systèmes d'information sont concernés. Cette
+            délimitation, appelée périmètre (ou « scope »), est l'une des décisions les plus structurantes
+            de tout le projet. Un périmètre trop large complexifie inutilement la démarche et dilue les
+            efforts ; un périmètre trop restreint, à l'inverse, peut laisser des risques significatifs
+            entièrement hors du champ de la gouvernance mise en place, ce qui affaiblit la crédibilité de
+            la certification obtenue. Cette étape inclut également l'analyse du contexte : les parties
+            intéressées (clients, régulateurs, actionnaires) et leurs exigences en matière de sécurité de
+            l'information.
+          </p>
+
+          <h2 class="headline headline-3">Étape 2 — Obtenir l'engagement de la direction</h2>
+
+          <p>
+            La norme exige explicitement un engagement visible et actif de la direction, et ce n'est pas
+            une formalité administrative. Sans un portage réel au niveau décisionnel, le SMSI se transforme
+            rapidement en une couche documentaire déconnectée de la réalité opérationnelle, faute de budget,
+            d'autorité pour arbitrer les priorités et de temps alloué aux équipes concernées. Cet engagement
+            se traduit concrètement par la nomination d'un responsable du SMSI clairement identifié, et par
+            l'inscription de revues de direction régulières à l'agenda.
+          </p>
+
+          <h2 class="headline headline-3">Étape 3 — Réaliser l'analyse de risques</h2>
+
+          <p>
+            L'analyse de risques constitue le véritable cœur du SMSI. Elle consiste à identifier les actifs
+            informationnels à protéger (données, systèmes, processus), les menaces et vulnérabilités qui
+            leur sont associées, puis à déterminer un niveau de risque pour chaque combinaison pertinente,
+            généralement en croisant probabilité d'occurrence et impact potentiel. C'est cette analyse, et
+            elle seule, qui justifie ensuite le choix des mesures de sécurité à mettre en œuvre — et non
+            l'inverse. Une erreur fréquente chez les organisations qui découvrent la norme consiste à
+            partir directement de la liste des contrôles de sécurité de l'Annexe A, en cherchant à tous les
+            appliquer par précaution. Cette approche inverse la logique de la norme, qui veut que chaque
+            mesure de sécurité se justifie par un risque identifié, et non l'inverse.
+          </p>
+
+          <h2 class="headline headline-3">Étape 4 — Rédiger la politique et sélectionner les contrôles</h2>
+
+          <p>
+            À partir des résultats de l'analyse de risques, la politique de sécurité de l'information fixe
+            les orientations générales et les engagements de l'organisation. En parallèle, la Déclaration
+            d'Applicabilité (Statement of Applicability, ou SoA) précise, pour chacun des contrôles listés
+            dans l'Annexe A de la norme, s'il est retenu ou écarté, avec une justification argumentée dans
+            les deux cas. Ce document est l'un des livrables les plus scrutés lors d'un audit de
+            certification, car il matérialise directement le lien entre l'analyse de risques et les mesures
+            réellement mises en œuvre.
+          </p>
+
+          <h2 class="headline headline-3">Étape 5 — Déployer, documenter et sensibiliser</h2>
+
+          <p>
+            Les mesures retenues doivent ensuite être effectivement mises en œuvre, accompagnées de
+            procédures documentées suffisamment précises pour être appliquées de façon reproductible,
+            indépendamment de la personne en poste à un moment donné. Cette étape inclut également la
+            sensibilisation de l'ensemble des collaborateurs concernés : un SMSI qui repose uniquement sur
+            de la documentation, sans appropriation réelle par les équipes opérationnelles, produit rarement
+            les effets attendus sur le terrain.
+          </p>
+
+          <h2 class="headline headline-3">Étape 6 — Contrôler : audits internes et revue de direction</h2>
+
+          <p>
+            Une fois le SMSI déployé, des audits internes réguliers permettent de vérifier qu'il fonctionne
+            réellement comme prévu — c'est le sujet que je développe dans un autre article dédié à la
+            préparation d'un audit interne ISO 27001. Ces audits alimentent ensuite la revue de direction,
+            un moment formel où la direction examine la performance globale du SMSI, les non-conformités
+            constatées, les résultats de l'analyse de risques mise à jour, et décide des ajustements
+            nécessaires.
+          </p>
+
+          <h2 class="headline headline-3">Étape 7 — La certification et l'amélioration continue</h2>
+
+          <p>
+            Pour les organisations qui visent une certification formelle, l'audit se déroule généralement en
+            deux temps auprès d'un organisme accrédité : un premier audit (dit de « stage 1 ») vérifie que
+            la documentation du SMSI est complète et cohérente, suivi d'un second audit (« stage 2 ») qui
+            vérifie sa mise en œuvre effective sur le terrain. Mais qu'il y ait certification formelle ou
+            non, le SMSI n'est jamais un projet que l'on termine : les audits internes, les revues de
+            direction et les indicateurs de performance alimentent un cycle d'amélioration continue, qui
+            constitue la condition indispensable au maintien de la pertinence — et de la certification,
+            le cas échéant — dans la durée.
+          </p>
+
+          <blockquote>
+            « Un SMSI n'est pas un projet que l'on termine, c'est un processus de gouvernance que l'on
+            entretient dans le temps, à mesure que l'organisation et les menaces évoluent. »
+          </blockquote>
+
+          <h2 class="headline headline-3">Combien de temps prévoir ?</h2>
+
+          <p>
+            La durée d'un projet de mise en place, entre la décision initiale et l'obtention d'une
+            certification, varie fortement selon la taille de l'organisation, la maturité déjà existante de
+            ses pratiques de sécurité, et les ressources réellement disponibles pour porter le projet. Pour
+            une structure de taille moyenne partant d'une base quasi inexistante, une fourchette de neuf à
+            dix-huit mois est réaliste, en incluant le temps nécessaire à l'analyse de risques initiale,
+            au déploiement des mesures retenues, puis à la maturation du système avant l'audit de
+            certification — un SMSI mis en place la veille de l'audit, sans historique de fonctionnement
+            réel, ne convainc généralement pas les auditeurs. Vouloir aller trop vite est l'une des causes
+            les plus fréquentes d'échec ou de report d'une certification.
+          </p>
+
+          <h2 class="headline headline-3">Les erreurs les plus fréquentes à éviter</h2>
+
+          <p>
+            Trois écueils reviennent régulièrement dans les démarches ISO 27001 : traiter le SMSI comme un
+            projet ponctuel avec une date de fin plutôt que comme un processus permanent ; construire une
+            documentation abondante mais déconnectée des pratiques réelles des équipes ; et sélectionner les
+            contrôles de sécurité sans les rattacher explicitement à une analyse de risques documentée. Ces
+            trois erreurs partagent une même cause profonde : traiter la norme comme une contrainte de
+            conformité à satisfaire, plutôt que comme un outil de gouvernance destiné à réellement réduire
+            les risques de l'organisation.
+          </p>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card footer">
+
+        <div class="section footer-top">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana"></a>
+            <p class="footer-text"><strong>Emerick Dushimirimana</strong><br>Consultant Cybersécurité &amp; GRC</p>
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Navigation</p>
+            <ul>
+              <li><a href="../index.html" class="footer-link hover-2">Accueil</a></li>
+              <li><a href="../blog.html" class="footer-link hover-2">Blog</a></li>
+              <li><a href="../about.html" class="footer-link hover-2">À propos</a></li>
+              <li><a href="../mentions-legales.html" class="footer-link hover-2">Mentions légales</a></li>
+              <li><a href="../politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a></li><li><a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Réseaux</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a></li>
+              <li><a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a></li>
+              <li><a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+          <ul class="social-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon><span class="span">LinkedIn</span></a></li>
+            <li><a href="https://github.com/EmerickDushel" class="social-link"><ion-icon name="logo-github"></ion-icon><span class="span">GitHub</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn><ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon></a>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

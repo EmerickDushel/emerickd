@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sécuriser un serveur Linux : les contrôles essentiels - Emerick Dushimirimana</title>
+  <meta name="title" content="Sécuriser un serveur Linux : les contrôles essentiels - Emerick Dushimirimana">
+  <meta name="description"
+    content="Les contrôles indispensables pour durcir un serveur Linux exposé : gestion des comptes, services, pare-feu, mises à jour et supervision.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Sécuriser un serveur Linux : les contrôles essentiels">
+  <meta property="og:description"
+    content="Les contrôles indispensables pour durcir un serveur Linux exposé.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/featured-securiser-linux.png">
+  <link rel="canonical" href="https://emerickd.com/articles/securiser-serveur-linux.html">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a></li>
+          <li><a href="../blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a></li>
+          <li><a href="../about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a></li>
+        </ul>
+
+        <div class="navbar-bottom">
+
+          <div class="profile-card">
+            <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana"
+              class="profile-banner">
+
+            <div>
+              <p class="card-title">Emerick Dushimirimana</p>
+              <p class="card-subtitle">Consultant Cybersécurité &amp; GRC</p>
+            </div>
+          </div>
+
+          <ul class="link-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a></li>
+            <li><a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a></li>
+          </ul>
+
+        </div>
+
+        <p class="copyright-text">© 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+
+      </nav>
+
+      <a href="../index.html#newsletter" class="btn btn-primary">S'abonner</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="section post" aria-labelledby="post-title">
+      <div class="container post-container">
+
+        <div class="post-header">
+
+          <div class="card-tag">
+            <a href="../blog.html" class="span hover-2">#Linux</a>
+            <a href="../blog.html" class="span hover-2">#Hardening</a>
+          </div>
+
+          <h1 class="headline headline-1 post-title" id="post-title">
+            Sécuriser un serveur Linux : les contrôles essentiels
+          </h1>
+
+          <div class="card-wrapper post-meta">
+
+            <div class="profile-card">
+              <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana"
+                class="profile-banner">
+
+              <div>
+                <p class="card-title">Emerick Dushimirimana</p>
+                <time class="card-subtitle publish-date" datetime="2026-08-18">18 août 2026</time>
+              </div>
+            </div>
+
+            <div class="wrapper">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span class="span">6 min de lecture</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <figure class="post-cover img-holder" style="--width: 1602; --height: 903;">
+          <img src="../assets/images/featured-securiser-linux.png" width="1602" height="903"
+            alt="Terminal Linux et infrastructure serveur" class="img-cover">
+        </figure>
+
+        <div class="post-content">
+
+          <p>
+            Dès qu'un serveur Linux est connecté à Internet, il devient une cible. Pas nécessairement une
+            cible visée personnellement par un attaquant déterminé : le plus souvent, ce sont des robots
+            qui scannent en continu des plages d'adresses IP entières, à la recherche de services mal
+            configurés, de comptes protégés par des mots de passe faibles ou de logiciels dont une faille
+            connue n'a pas encore été corrigée. Ce type d'attaque opportuniste ne demande aucune
+            sophistication de la part de l'attaquant : il suffit qu'un seul point faible existe pour qu'il
+            soit trouvé, souvent en quelques heures seulement après la mise en ligne d'une machine.
+          </p>
+
+          <p>
+            La bonne nouvelle, c'est que se protéger de l'immense majorité de ces attaques ne demande pas
+            d'outils sophistiqués non plus. Le durcissement d'un serveur repose sur une poignée de
+            contrôles simples, mais appliqués systématiquement et sans exception. Cet article détaille ces
+            contrôles dans l'ordre où il est logique de les mettre en place, en expliquant à chaque fois
+            le raisonnement qui les justifie.
+          </p>
+
+          <h2 class="headline headline-3">Comprendre ce que l'on protège</h2>
+
+          <p>
+            Avant de configurer quoi que ce soit, il est utile de se poser une question simple : qu'est-ce
+            qui, sur ce serveur, représenterait un problème si un attaquant y accédait ? Des données
+            clients, des identifiants d'accès à d'autres systèmes, la capacité à faire transiter du trafic
+            malveillant, ou simplement la disponibilité du service pour vos utilisateurs. Cette réflexion
+            détermine le niveau d'exigence à appliquer : un serveur de test isolé sans donnée sensible
+            n'a pas les mêmes besoins qu'un serveur de production hébergeant des données personnelles.
+            Le durcissement n'est jamais une fin en soi, il doit rester proportionné à ce qu'il protège.
+          </p>
+
+          <h2 class="headline headline-3">Gestion des comptes et des accès</h2>
+
+          <p>
+            L'accès administrateur est le premier point à sécuriser, car c'est la porte d'entrée la plus
+            directe vers le contrôle total de la machine. Trois règles simples réduisent déjà
+            considérablement le risque :
+          </p>
+
+          <p>
+            <strong>Désactiver la connexion SSH directe en tant que <code>root</code>.</strong>
+            Le compte <code>root</code> existe sur toutes les distributions Linux, ce qui en fait la
+            première cible de toute tentative de connexion automatisée. En désactivant son accès direct
+            (<code>PermitRootLogin no</code> dans la configuration SSH) et en imposant de passer par un
+            compte nominatif puis <code>sudo</code>, on élimine d'un coup l'essentiel des tentatives de
+            bruteforce, tout en conservant une trace claire de qui a effectué quelle action.
+          </p>
+
+          <p>
+            <strong>Privilégier l'authentification par clé plutôt que par mot de passe.</strong>
+            Une clé SSH est virtuellement impossible à deviner par une attaque par force brute, contrairement
+            à un mot de passe, même complexe. Une fois les clés en place et testées, désactivez
+            l'authentification par mot de passe (<code>PasswordAuthentication no</code>) : un attaquant ne
+            disposant pas de la clé privée correspondante ne pourra tout simplement pas se connecter, quel
+            que soit le nombre de tentatives.
+          </p>
+
+          <p>
+            <strong>Limiter les droits <code>sudo</code> au strict nécessaire.</strong>
+            Chaque compte disposant de droits d'administration est un point d'entrée potentiel
+            supplémentaire. Un compte compromis avec des droits <code>sudo</code> complets équivaut à un
+            accès <code>root</code> compromis. Accordez les droits au cas par cas, pour les commandes
+            réellement nécessaires, plutôt que par habitude ou par facilité.
+          </p>
+
+          <p>
+            Le changement du port SSH par défaut (22) est parfois présenté comme une mesure de sécurité :
+            en réalité, il ne fait que réduire le bruit dans les journaux en évitant les scans les plus
+            basiques. Ce n'est pas une protection en soi, seulement un complément qui n'a de sens qu'associé
+            aux mesures précédentes.
+          </p>
+
+          <h2 class="headline headline-3">Réduire les services exposés</h2>
+
+          <p>
+            Chaque service en écoute sur le réseau est une surface d'attaque potentielle : une application
+            web, une base de données accessible depuis l'extérieur, un service d'administration oublié
+            après une phase de test. Le principe à appliquer est celui du moindre privilège appliqué aux
+            services : un serveur ne doit faire tourner que ce dont il a réellement besoin pour remplir sa
+            fonction.
+          </p>
+
+          <p>
+            Concrètement, cela implique un inventaire régulier des services actifs (la commande
+            <code>ss -tulpn</code> permet de lister les ports en écoute) et la désinstallation de tout ce
+            qui n'est plus utilisé. Un serveur web n'a par exemple aucune raison d'exposer un service de
+            base de données directement sur Internet : celui-ci devrait rester accessible uniquement depuis
+            le réseau interne ou via un tunnel sécurisé.
+          </p>
+
+          <p>
+            Un pare-feu comme <code>ufw</code> (simple d'usage) ou <code>nftables</code> (plus complet)
+            vient compléter cette réduction de surface, en n'autorisant explicitement que les ports
+            réellement nécessaires :
+          </p>
+
+          <pre><code>ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw enable</code></pre>
+
+          <p>
+            Cette configuration illustre le principe : tout est bloqué par défaut, et seuls les ports
+            explicitement justifiés (ici, SSH et HTTPS) sont ouverts. Chaque règle ajoutée doit pouvoir être
+            justifiée par un besoin réel.
+          </p>
+
+          <h2 class="headline headline-3">Mises à jour et gestion des correctifs</h2>
+
+          <p>
+            Une part importante des compromissions de serveurs exploite des vulnérabilités déjà connues et
+            déjà corrigées par l'éditeur, mais dont le correctif n'a simplement pas encore été appliqué.
+            Maintenir un serveur à jour n'est pas une tâche secondaire : c'est l'un des contrôles les plus
+            efficaces qui soient, précisément parce qu'il neutralise des failles déjà documentées et donc
+            faciles à exploiter automatiquement.
+          </p>
+
+          <p>
+            Sur les distributions basées sur Debian ou Ubuntu, le paquet <code>unattended-upgrades</code>
+            permet d'automatiser l'installation des correctifs de sécurité sans intervention manuelle. Sur
+            les environnements où une automatisation complète n'est pas souhaitable pour des raisons de
+            disponibilité, il faut à défaut planifier un processus régulier et documenté de vérification et
+            d'application des mises à jour, plutôt que de s'en remettre à la mémoire de l'administrateur.
+          </p>
+
+          <h2 class="headline headline-3">Journalisation et supervision</h2>
+
+          <p>
+            Un serveur durci reste une cible ; l'objectif n'est pas de rendre toute attaque impossible, mais
+            de la rendre suffisamment difficile et surtout détectable. Une supervision minimale mais
+            effective repose sur trois éléments : la centralisation des journaux (pour ne pas dépendre d'une
+            machine potentiellement compromise pour analyser l'incident qui l'a touchée), des alertes sur
+            les événements anormaux (tentatives de connexion répétées, créations de comptes, changements de
+            configuration), et un outil comme <code>fail2ban</code>, qui bannit automatiquement les adresses
+            IP à l'origine de tentatives de connexion répétées et échouées.
+          </p>
+
+          <h2 class="headline headline-3">Sauvegardes : le filet de sécurité</h2>
+
+          <p>
+            Même avec l'ensemble de ces contrôles en place, aucune protection n'est absolue. Des
+            sauvegardes régulières, testées et si possible stockées hors du serveur lui-même, constituent
+            la dernière ligne de défense : elles transforment un incident potentiellement catastrophique
+            (perte de données, ransomware) en un désagrément opérationnel maîtrisable. Une sauvegarde
+            jamais testée n'offre en réalité aucune garantie : seul un test de restauration effectif
+            confirme qu'elle est exploitable le jour où elle sera nécessaire.
+          </p>
+
+          <blockquote>
+            « La sécurité d'un serveur ne se résume pas à un outil unique : c'est la somme de petites
+            décisions de configuration appliquées avec rigueur et dans la durée. »
+          </blockquote>
+
+          <h2 class="headline headline-3">Ce qu'il faut retenir</h2>
+
+          <p>
+            Résumés, ces contrôles forment une check-list simple mais efficace : accès administrateur
+            restreint et par clé, services limités au strict nécessaire, pare-feu configuré en mode
+            « tout refuser sauf exception », mises à jour appliquées régulièrement, journalisation
+            centralisée avec alertes, et sauvegardes testées. Aucun de ces éléments n'est
+            individuellement sophistiqué, mais c'est leur application systématique et conjointe qui rend un
+            serveur significativement plus résistant aux attaques opportunistes, qui représentent la grande
+            majorité des menaces réellement rencontrées sur des machines exposées à Internet.
+          </p>
+
+          <p>
+            Ces contrôles ne remplacent cependant pas un audit complet et documenté. Un outil comme Lynis,
+            que je détaille dans un autre article, permet d'aller plus loin en passant en revue
+            systématiquement la configuration du système et en priorisant les actions de durcissement
+            restantes selon leur impact réel.
+          </p>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="../index.html" class="logo">
+              <img src="../assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana">
+            </a>
+
+            <p class="footer-text">
+              <strong>Emerick Dushimirimana</strong><br>
+              Consultant Cybersécurité &amp; GRC
+            </p>
+
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Navigation</p>
+            <ul>
+              <li><a href="../index.html" class="footer-link hover-2">Accueil</a></li>
+              <li><a href="../blog.html" class="footer-link hover-2">Blog</a></li>
+              <li><a href="../about.html" class="footer-link hover-2">À propos</a></li>
+              <li><a href="../mentions-legales.html" class="footer-link hover-2">Mentions légales</a></li>
+              <li><a href="../politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a></li><li><a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Réseaux</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a></li>
+              <li><a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a></li>
+              <li><a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">&copy; 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+
+          <ul class="social-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon><span class="span">LinkedIn</span></a></li>
+            <li><a href="https://github.com/EmerickDushel" class="social-link"><ion-icon name="logo-github"></ion-icon><span class="span">GitHub</span></a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!--
+  Email de confirmation d'inscription — à coller dans Brevo.
+
+  OÙ LE COLLER :
+  Brevo > Contacts > Formulaires > [votre formulaire] > onglet "Email de confirmation"
+  (ou "Réglages" selon la version de l'interface) > "Modifier le modèle" > éditeur HTML
+  (icône </> ou "Basculer en code source").
+  Collez tout le contenu ci-dessous à la place du modèle par défaut, puis enregistrez.
+
+  AVANT D'ENREGISTRER, remplacez :
+  - YOUR_LOGO_IMAGE_URL : dans l'éditeur Brevo, importez votre logo (bouton d'ajout
+    d'image / glisser-déposer) puis copiez l'URL qu'il génère, OU utilisez l'URL de
+    votre logo une fois le site en ligne (ex. https://votredomaine.com/assets/images/logo.png).
+  - YOUR_SITE_URL : l'adresse de votre site une fois en ligne (pour le bouton
+    "Voir le blog"). En attendant, vous pouvez laisser "#".
+
+  Le lien de désinscription {{ unsubscribe }} est une balise Brevo : elle est
+  remplacée automatiquement par un vrai lien de désabonnement à l'envoi, pas besoin
+  d'y toucher.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscription confirmée</title>
+</head>
+<body style="margin:0; padding:0; background-color:#0d1420; font-family:Arial, Helvetica, sans-serif;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#0d1420;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width:520px; background-color:#131b30; border:1px solid #2a3350; border-radius:16px; overflow:hidden;">
+
+          <!-- logo -->
+          <tr>
+            <td align="center" style="padding:32px 32px 8px 32px;">
+              <img src="YOUR_LOGO_IMAGE_URL" width="90" height="37" alt="Emerick Dushimirimana" style="display:block; border:0;">
+            </td>
+          </tr>
+
+          <!-- accent bar -->
+          <tr>
+            <td style="padding:16px 32px 0 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td height="3" style="line-height:3px; font-size:3px; background-color:#0ea5ea; border-radius:2px;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- title -->
+          <tr>
+            <td align="center" style="padding:28px 32px 4px 32px;">
+              <p style="margin:0; color:#eaf2ff; font-size:22px; font-weight:800; line-height:1.3;">
+                Inscription confirmée
+              </p>
+            </td>
+          </tr>
+
+          <!-- body text -->
+          <tr>
+            <td align="center" style="padding:12px 32px 8px 32px;">
+              <p style="margin:0; color:#9dafce; font-size:15px; line-height:1.6;">
+                Merci de vous être inscrit à la newsletter d'Emerick Dushimirimana. Vous
+                recevrez désormais les nouvelles analyses, guides et ressources autour de la
+                cybersécurité, de la GRC et de la sécurité technique, dès leur publication.
+              </p>
+            </td>
+          </tr>
+
+          <!-- CTA button -->
+          <tr>
+            <td align="center" style="padding:24px 32px 32px 32px;">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center" style="border-radius:6px; background-color:#0ea5ea;">
+                    <a href="YOUR_SITE_URL" target="_blank"
+                      style="display:inline-block; padding:12px 24px; color:#ffffff; font-size:14px; font-weight:700; text-decoration:none; border-radius:6px;">
+                      Découvrir le blog
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- divider -->
+          <tr>
+            <td style="padding:0 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td height="1" style="line-height:1px; font-size:1px; background-color:#2a3350;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- footer -->
+          <tr>
+            <td align="center" style="padding:20px 32px 32px 32px;">
+              <p style="margin:0 0 8px 0; color:#6b7897; font-size:12px; line-height:1.6;">
+                Emerick Dushimirimana — Consultant Cybersécurité &amp; GRC
+              </p>
+              <p style="margin:0; color:#6b7897; font-size:12px; line-height:1.6;">
+                Vous ne souhaitez plus recevoir ces emails ?
+                <a href="{{ unsubscribe }}" style="color:#0ea5ea; text-decoration:underline;">Se désinscrire</a>
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

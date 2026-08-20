@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OWASP Top 10 : comprendre les principales vulnérabilités Web - Emerick Dushimirimana</title>
+  <meta name="title" content="OWASP Top 10 : comprendre les principales vulnérabilités Web - Emerick Dushimirimana">
+  <meta name="description"
+    content="Présentation des principales familles de vulnérabilités Web listées par l'OWASP et des bonnes pratiques pour réduire les risques applicatifs.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="OWASP Top 10 : comprendre les principales vulnérabilités Web">
+  <meta property="og:description" content="Les grandes familles de vulnérabilités Web selon l'OWASP.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/featured-owasp-top10.png">
+  <link rel="canonical" href="https://emerickd.com/articles/owasp-top10-vulnerabilites-web.html">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana"></a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a></li>
+          <li><a href="../blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a></li>
+          <li><a href="../about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a></li>
+        </ul>
+
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+            <div>
+              <p class="card-title">Emerick Dushimirimana</p>
+              <p class="card-subtitle">Consultant Cybersécurité &amp; GRC</p>
+            </div>
+          </div>
+          <ul class="link-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a></li>
+            <li><a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a></li>
+          </ul>
+        </div>
+
+        <p class="copyright-text">© 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+      </nav>
+
+      <a href="../index.html#newsletter" class="btn btn-primary">S'abonner</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler><ion-icon name="menu-outline" aria-hidden="true"></ion-icon></button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="section post" aria-labelledby="post-title">
+      <div class="container post-container">
+
+        <div class="post-header">
+
+          <div class="card-tag">
+            <a href="../blog.html" class="span hover-2">#Pentest</a>
+            <a href="../blog.html" class="span hover-2">#OWASP</a>
+          </div>
+
+          <h1 class="headline headline-1 post-title" id="post-title">
+            OWASP Top 10 : comprendre les principales vulnérabilités Web
+          </h1>
+
+          <div class="card-wrapper post-meta">
+            <div class="profile-card">
+              <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+              <div>
+                <p class="card-title">Emerick Dushimirimana</p>
+                <time class="card-subtitle publish-date" datetime="2026-07-20">20 juillet 2026</time>
+              </div>
+            </div>
+            <div class="wrapper">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span class="span">6 min de lecture</span>
+            </div>
+          </div>
+
+        </div>
+
+        <figure class="post-cover img-holder" style="--width: 1602; --height: 903;">
+          <img src="../assets/images/featured-owasp-top10.png" width="1602" height="903"
+            alt="Architecture applicative et sécurité Web" class="img-cover">
+        </figure>
+
+        <div class="post-content">
+
+          <p>
+            L'OWASP (Open Worldwide Application Security Project) publie régulièrement un classement des
+            dix familles de risques applicatifs Web les plus fréquentes et les plus impactantes : l'OWASP
+            Top 10. Ce classement est devenu la référence la plus utilisée pour sensibiliser développeurs et
+            équipes sécurité, non pas parce qu'il serait exhaustif — il ne couvre volontairement qu'une
+            sélection de catégories — mais parce qu'il constitue un point de départ solide et largement
+            partagé pour prioriser les efforts de sécurisation d'une application Web.
+          </p>
+
+          <p>
+            Plutôt que de chercher à mémoriser dix catégories abstraites, il est plus utile de comprendre le
+            raisonnement derrière chacune d'entre elles : quel type d'erreur de conception ou
+            d'implémentation elle décrit, et pourquoi cette erreur revient si souvent. Voici les familles de
+            risques les plus significatives, avec une explication accessible même sans bagage technique
+            approfondi.
+          </p>
+
+          <h2 class="headline headline-3">Broken Access Control : le contrôle d'accès défaillant</h2>
+
+          <p>
+            Cette catégorie figure en tête du classement, et pour une bonne raison : elle regroupe tous les
+            cas où un utilisateur parvient à accéder à des ressources ou à effectuer des actions qui ne
+            devraient pas lui être accessibles. L'exemple le plus courant est simple à comprendre : un
+            utilisateur consulte sa propre facture à l'adresse <code>/factures/1042</code>, puis modifie
+            simplement le nombre dans l'URL pour tenter <code>/factures/1043</code> — et découvre qu'il peut
+            consulter la facture d'un autre client, parce que l'application n'a jamais vérifié que la
+            ressource demandée appartenait bien à l'utilisateur connecté. Ce type de défaut, souvent appelé
+            IDOR (Insecure Direct Object Reference), est l'une des vulnérabilités les plus fréquemment
+            rencontrées en test d'intrusion, précisément parce qu'elle est simple à introduire par erreur et
+            simple à exploiter.
+          </p>
+
+          <h2 class="headline headline-3">Cryptographic Failures : la protection des données sensibles</h2>
+
+          <p>
+            Cette catégorie couvre les cas où des données sensibles — mots de passe, informations
+            financières, données de santé — sont mal protégées : transmises sans chiffrement, stockées en
+            clair dans une base de données, ou protégées par des algorithmes de chiffrement obsolètes.
+            L'exemple le plus parlant reste le stockage des mots de passe : un mot de passe stocké en clair,
+            ou avec une fonction de hachage inadaptée, transforme n'importe quelle fuite de base de données
+            mineure en incident majeur, puisque les identifiants de tous les utilisateurs deviennent
+            immédiatement exploitables.
+          </p>
+
+          <h2 class="headline headline-3">Injection : mélanger code et données</h2>
+
+          <p>
+            Les failles d'injection (SQL, commande système, LDAP...) surviennent lorsque des données saisies
+            par un utilisateur sont envoyées à un interpréteur — une base de données, par exemple — sans
+            validation ni séparation stricte entre ce qui est du code et ce qui est de la donnée. Une
+            injection SQL réussie peut permettre à un attaquant de lire, modifier ou supprimer l'intégralité
+            d'une base de données, simplement en insérant des caractères spéciaux dans un champ de
+            formulaire censé ne contenir qu'un nom d'utilisateur. Les requêtes préparées (qui séparent
+            structurellement le code de la donnée) et la validation systématique des entrées restent les
+            défenses les plus efficaces contre cette famille de vulnérabilités, connue depuis plus de vingt
+            ans mais toujours activement exploitée.
+          </p>
+
+          <h2 class="headline headline-3">Identification and Authentication Failures</h2>
+
+          <p>
+            Cette catégorie regroupe les défauts touchant à l'authentification elle-même : absence de
+            limitation du nombre de tentatives de connexion (ce qui permet une attaque par force brute),
+            sessions qui n'expirent jamais, ou absence d'authentification à plusieurs facteurs sur des
+            comptes à privilèges élevés. Ces défauts sont particulièrement critiques car ils touchent
+            directement la porte d'entrée de l'application : une fois cette porte franchie, la plupart des
+            autres protections deviennent secondaires.
+          </p>
+
+          <h2 class="headline headline-3">Security Misconfiguration</h2>
+
+          <p>
+            Une configuration par défaut laissée telle quelle en production, des messages d'erreur trop
+            verbeux qui révèlent des détails techniques internes, des en-têtes de sécurité HTTP absents,
+            des interfaces d'administration accessibles sans restriction : ces défauts de configuration
+            comptent parmi les plus fréquents rencontrés en audit, et paradoxalement parmi les plus simples
+            à corriger une fois identifiés. C'est souvent le premier point à vérifier lors d'un audit, car
+            le rapport effort de correction / réduction de risque y est particulièrement favorable.
+          </p>
+
+          <h2 class="headline headline-3">Vulnerable and Outdated Components</h2>
+
+          <p>
+            Une application moderne repose presque toujours sur un grand nombre de bibliothèques et de
+            frameworks tiers. Lorsqu'une vulnérabilité est découverte dans l'un de ces composants et rendue
+            publique, toutes les applications qui l'utilisent sans avoir appliqué le correctif deviennent
+            des cibles potentielles, sans même que l'attaquant ait besoin de connaître le code source de
+            l'application elle-même. Maintenir un inventaire à jour des dépendances utilisées et surveiller
+            les vulnérabilités qui les concernent est devenu un contrôle de sécurité à part entière.
+          </p>
+
+          <h2 class="headline headline-3">Insecure Design : quand le problème vient de la conception</h2>
+
+          <p>
+            Cette catégorie, plus récente dans le classement, se distingue des autres : elle ne décrit pas
+            une erreur d'implémentation, mais une faiblesse présente dès la conception de la fonctionnalité,
+            avant même la première ligne de code. Un exemple classique est un mécanisme de réinitialisation
+            de mot de passe qui envoie un code à six chiffres sans limiter le nombre de tentatives : même
+            parfaitement implémenté, ce mécanisme reste conceptuellement vulnérable à une attaque par force
+            brute. Corriger ce type de défaut après coup est généralement bien plus coûteux que de l'éviter
+            en amont, ce qui justifie d'intégrer une réflexion sécurité dès la phase de conception plutôt
+            que de la reporter à une revue de code tardive.
+          </p>
+
+          <h2 class="headline headline-3">Server-Side Request Forgery (SSRF)</h2>
+
+          <p>
+            Cette vulnérabilité survient lorsqu'une application, sur demande d'un utilisateur, effectue
+            elle-même une requête réseau vers une adresse fournie par cet utilisateur — par exemple pour
+            récupérer un aperçu d'image depuis une URL fournie dans un formulaire. Si cette adresse n'est
+            pas correctement validée, un attaquant peut détourner cette fonctionnalité pour forcer le
+            serveur à interroger des ressources internes normalement inaccessibles depuis l'extérieur,
+            contournant ainsi les protections périmétriques classiques. Avec la généralisation des
+            architectures cloud, où des métadonnées sensibles sont parfois exposées sur des adresses réseau
+            internes prévisibles, cette catégorie de risque a pris une importance croissante ces dernières
+            années.
+          </p>
+
+          <blockquote>
+            « L'OWASP Top 10 n'est pas une liste à cocher une fois pour toutes : c'est un cadre de lecture à
+            réutiliser à chaque étape du cycle de développement pour orienter les priorités de
+            sécurisation. »
+          </blockquote>
+
+          <h2 class="headline headline-3">Comment utiliser cette liste concrètement</h2>
+
+          <p>
+            La vraie valeur de l'OWASP Top 10 ne réside pas dans sa mémorisation, mais dans son usage comme
+            grille de lecture systématique : lors d'une revue de code, en se demandant pour chaque
+            fonctionnalité manipulant des données utilisateur si l'un de ces risques pourrait s'appliquer ;
+            lors de la conception d'une nouvelle fonctionnalité, en intégrant ces questions dès la phase de
+            spécification plutôt qu'après la mise en production ; et bien sûr lors des tests d'intrusion,
+            où elle sert de canevas pour structurer méthodiquement les vérifications à effectuer. Utilisée
+            ainsi, en amont plutôt qu'en réaction à un incident, elle permet d'intégrer la sécurité comme
+            une dimension normale du développement, plutôt que comme une contrainte découverte après coup.
+          </p>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card footer">
+
+        <div class="section footer-top">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana"></a>
+            <p class="footer-text"><strong>Emerick Dushimirimana</strong><br>Consultant Cybersécurité &amp; GRC</p>
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Navigation</p>
+            <ul>
+              <li><a href="../index.html" class="footer-link hover-2">Accueil</a></li>
+              <li><a href="../blog.html" class="footer-link hover-2">Blog</a></li>
+              <li><a href="../about.html" class="footer-link hover-2">À propos</a></li>
+              <li><a href="../mentions-legales.html" class="footer-link hover-2">Mentions légales</a></li>
+              <li><a href="../politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a></li><li><a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Réseaux</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a></li>
+              <li><a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a></li>
+              <li><a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+          <ul class="social-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon><span class="span">LinkedIn</span></a></li>
+            <li><a href="https://github.com/EmerickDushel" class="social-link"><ion-icon name="logo-github"></ion-icon><span class="span">GitHub</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn><ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon></a>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

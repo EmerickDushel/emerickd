@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comprendre la différence entre risque, menace et vulnérabilité - Emerick Dushimirimana</title>
+  <meta name="title" content="Comprendre la différence entre risque, menace et vulnérabilité - Emerick Dushimirimana">
+  <meta name="description"
+    content="Trois notions souvent confondues mais essentielles pour construire une analyse de risques rigoureuse et un langage commun avec les métiers.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Comprendre la différence entre risque, menace et vulnérabilité">
+  <meta property="og:description" content="Trois notions clés de la gestion des risques cybersécurité, expliquées simplement.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/featured-risque-menace-vulnerabilite.png">
+  <link rel="canonical" href="https://emerickd.com/articles/risque-menace-vulnerabilite.html">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana"></a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a></li>
+          <li><a href="../blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a></li>
+          <li><a href="../about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a></li>
+        </ul>
+
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+            <div>
+              <p class="card-title">Emerick Dushimirimana</p>
+              <p class="card-subtitle">Consultant Cybersécurité &amp; GRC</p>
+            </div>
+          </div>
+          <ul class="link-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a></li>
+            <li><a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a></li>
+          </ul>
+        </div>
+
+        <p class="copyright-text">© 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+      </nav>
+
+      <a href="../index.html#newsletter" class="btn btn-primary">S'abonner</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler><ion-icon name="menu-outline" aria-hidden="true"></ion-icon></button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="section post" aria-labelledby="post-title">
+      <div class="container post-container">
+
+        <div class="post-header">
+
+          <div class="card-tag">
+            <a href="../blog.html" class="span hover-2">#RiskManagement</a>
+            <a href="../blog.html" class="span hover-2">#GRC</a>
+          </div>
+
+          <h1 class="headline headline-1 post-title" id="post-title">
+            Comprendre la différence entre risque, menace et vulnérabilité
+          </h1>
+
+          <div class="card-wrapper post-meta">
+            <div class="profile-card">
+              <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+              <div>
+                <p class="card-title">Emerick Dushimirimana</p>
+                <time class="card-subtitle publish-date" datetime="2026-08-03">3 août 2026</time>
+              </div>
+            </div>
+            <div class="wrapper">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span class="span">4 min de lecture</span>
+            </div>
+          </div>
+
+        </div>
+
+        <figure class="post-cover img-holder" style="--width: 1602; --height: 903;">
+          <img src="../assets/images/featured-risque-menace-vulnerabilite.png" width="1602" height="903"
+            alt="Analyse de données et cartographie des risques" class="img-cover">
+        </figure>
+
+        <div class="post-content">
+
+          <p>
+            Dans les échanges entre équipes techniques et métiers, ces trois termes sont très souvent
+            employés l'un pour l'autre, comme s'ils étaient interchangeables. Pourtant, en gestion des
+            risques, ils désignent des réalités bien distinctes — et les confondre conduit presque
+            toujours à mal évaluer le risque réel, en traitant en urgence des problèmes secondaires tout
+            en laissant de côté des enjeux réellement critiques.
+          </p>
+
+          <h2 class="headline headline-3">La vulnérabilité : une faiblesse qui existe, point</h2>
+
+          <p>
+            Une vulnérabilité est une faiblesse présente dans un système, un processus ou une organisation :
+            une faille logicielle non corrigée, un mot de passe faible, une procédure de sauvegarde absente,
+            un employé qui n'a jamais reçu de formation sur le phishing. Une caractéristique essentielle de
+            la vulnérabilité est qu'elle existe indépendamment de toute intention de l'exploiter : une
+            porte non verrouillée reste une vulnérabilité, que quelqu'un cherche à entrer ou non.
+          </p>
+
+          <h2 class="headline headline-3">La menace : ce qui pourrait exploiter cette faiblesse</h2>
+
+          <p>
+            Une menace, à l'inverse, est ce qui pourrait exploiter une vulnérabilité pour causer un dommage.
+            Il peut s'agir d'un attaquant humain motivé, d'un logiciel malveillant automatisé, mais aussi
+            d'une erreur humaine involontaire, voire d'un événement sans intention malveillante comme une
+            catastrophe naturelle affectant un datacenter. Ce point mérite d'être souligné : une menace sans
+            vulnérabilité associée n'a, par définition, aucun effet concret ; et symétriquement, une
+            vulnérabilité sans menace crédible représente un risque nettement plus limité.
+          </p>
+
+          <h2 class="headline headline-3">Un exemple concret pour fixer les idées</h2>
+
+          <p>
+            Prenons un serveur Web exécutant une version d'un logiciel dont une faille critique vient d'être
+            publiée. La faille elle-même — le fait que le logiciel puisse être compromis dans certaines
+            conditions — est la <strong>vulnérabilité</strong>. Les personnes ou programmes susceptibles de
+            chercher à exploiter cette faille précise, dès qu'elle est rendue publique, constituent la
+            <strong>menace</strong>. Le <strong>risque</strong>, lui, dépend de plusieurs facteurs combinés :
+            ce serveur est-il exposé sur Internet ou protégé derrière un accès restreint ? Contient-il des
+            données sensibles ou seulement des informations publiques ? Un correctif est-il déjà disponible,
+            et combien de temps faudra-t-il pour l'appliquer ? Deux serveurs affectés par exactement la même
+            vulnérabilité peuvent ainsi représenter un niveau de risque radicalement différent selon leur
+            contexte d'exposition et la criticité de ce qu'ils hébergent.
+          </p>
+
+          <h2 class="headline headline-3">Le risque : la combinaison qui permet de prioriser</h2>
+
+          <p>
+            Le risque est donc la combinaison d'une menace exploitant une vulnérabilité, pondérée par
+            l'impact que cela aurait réellement sur l'organisation si cela se produisait. C'est ce
+            triptyque — menace, vulnérabilité, impact — qui permet de prioriser efficacement les actions à
+            mener : toutes les vulnérabilités identifiées ne méritent pas le même niveau d'urgence ni les
+            mêmes ressources. Tout dépend de la probabilité réaliste qu'elles soient exploitées, et des
+            conséquences concrètes si c'était le cas. Une organisation qui traite chaque vulnérabilité
+            technique avec la même priorité, indépendamment de son contexte réel, finit invariablement par
+            gaspiller ses ressources sur des problèmes mineurs pendant que des risques majeurs restent sans
+            réponse.
+          </p>
+
+          <blockquote>
+            « On ne traite pas une vulnérabilité parce qu'elle existe : on la traite parce qu'elle
+            représente, compte tenu du contexte, un niveau de risque jugé inacceptable pour
+            l'organisation. »
+          </blockquote>
+
+          <h2 class="headline headline-3">Un score ne dit pas tout : l'exemple du CVSS</h2>
+
+          <p>
+            Dans le monde de la gestion des vulnérabilités, le score CVSS (Common Vulnerability Scoring
+            System) illustre bien pourquoi la distinction entre vulnérabilité et risque compte concrètement.
+            Ce score, attribué à une vulnérabilité technique publiée, mesure sa gravité intrinsèque —
+            complexité d'exploitation, privilèges nécessaires, impact technique — indépendamment de tout
+            contexte d'usage. Une vulnérabilité au score CVSS très élevé sur un système totalement isolé du
+            réseau et sans donnée sensible peut représenter, en pratique, un risque bien plus faible qu'une
+            vulnérabilité au score modéré sur un système exposé publiquement et hébergeant des données
+            critiques. Le score CVSS renseigne sur la vulnérabilité ; seule une analyse de risque, qui prend
+            en compte la menace réelle et le contexte d'exposition, permet de déterminer la priorité de
+            traitement réellement justifiée.
+          </p>
+
+          <h2 class="headline headline-3">Pourquoi cette distinction change concrètement le travail</h2>
+
+          <p>
+            Cette distinction n'est pas un exercice de vocabulaire : elle est la base de toute analyse de
+            risques structurée, et notamment de l'analyse de risques exigée par des référentiels comme
+            l'ISO 27001 ou l'ISO 27005. Elle permet surtout de construire un langage commun entre les
+            équipes techniques, qui identifient et remontent les vulnérabilités au quotidien, et les
+            décideurs, qui n'ont ni le temps ni l'expertise pour évaluer chaque faille individuellement,
+            mais qui doivent arbitrer sur le niveau de risque que l'organisation est prête à accepter. Sans
+            ce langage commun, les discussions entre technique et direction tournent souvent en rond,
+            chacun parlant d'un niveau de réalité différent sans s'en rendre compte — l'équipe technique
+            alertant sur la gravité intrinsèque d'une faille, la direction cherchant à comprendre la
+            conséquence business réelle si elle n'est pas traitée dans l'immédiat. Relier systématiquement
+            ces trois notions permet à ces deux niveaux de discussion de converger vers une même décision,
+            documentée et assumée.
+          </p>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card footer">
+
+        <div class="section footer-top">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana"></a>
+            <p class="footer-text"><strong>Emerick Dushimirimana</strong><br>Consultant Cybersécurité &amp; GRC</p>
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Navigation</p>
+            <ul>
+              <li><a href="../index.html" class="footer-link hover-2">Accueil</a></li>
+              <li><a href="../blog.html" class="footer-link hover-2">Blog</a></li>
+              <li><a href="../about.html" class="footer-link hover-2">À propos</a></li>
+              <li><a href="../mentions-legales.html" class="footer-link hover-2">Mentions légales</a></li>
+              <li><a href="../politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a></li><li><a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Réseaux</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a></li>
+              <li><a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a></li>
+              <li><a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+          <ul class="social-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon><span class="span">LinkedIn</span></a></li>
+            <li><a href="https://github.com/EmerickDushel" class="social-link"><ion-icon name="logo-github"></ion-icon><span class="span">GitHub</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn><ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon></a>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

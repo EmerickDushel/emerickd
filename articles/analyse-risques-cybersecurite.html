@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Comment réaliser une analyse de risques cybersécurité ? - Emerick Dushimirimana</title>
+  <meta name="title" content="Comment réaliser une analyse de risques cybersécurité ? - Emerick Dushimirimana">
+  <meta name="description"
+    content="Une approche pratique pour identifier les actifs, les menaces, les vulnérabilités et construire un plan de traitement adapté aux enjeux métiers.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Comment réaliser une analyse de risques cybersécurité ?">
+  <meta property="og:description" content="Méthode pratique pour mener une analyse de risques cybersécurité.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/featured-analyse-risques.png">
+  <link rel="canonical" href="https://emerickd.com/articles/analyse-risques-cybersecurite.html">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana"></a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a></li>
+          <li><a href="../blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a></li>
+          <li><a href="../about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a></li>
+        </ul>
+
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+            <div>
+              <p class="card-title">Emerick Dushimirimana</p>
+              <p class="card-subtitle">Consultant Cybersécurité &amp; GRC</p>
+            </div>
+          </div>
+          <ul class="link-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a></li>
+            <li><a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a></li>
+          </ul>
+        </div>
+
+        <p class="copyright-text">© 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+      </nav>
+
+      <a href="../index.html#newsletter" class="btn btn-primary">S'abonner</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler><ion-icon name="menu-outline" aria-hidden="true"></ion-icon></button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="section post" aria-labelledby="post-title">
+      <div class="container post-container">
+
+        <div class="post-header">
+
+          <div class="card-tag">
+            <a href="../blog.html" class="span hover-2">#RiskManagement</a>
+            <a href="../blog.html" class="span hover-2">#GRC</a>
+          </div>
+
+          <h1 class="headline headline-1 post-title" id="post-title">
+            Comment réaliser une analyse de risques cybersécurité ?
+          </h1>
+
+          <div class="card-wrapper post-meta">
+            <div class="profile-card">
+              <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+              <div>
+                <p class="card-title">Emerick Dushimirimana</p>
+                <time class="card-subtitle publish-date" datetime="2026-08-05">5 août 2026</time>
+              </div>
+            </div>
+            <div class="wrapper">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span class="span">6 min de lecture</span>
+            </div>
+          </div>
+
+        </div>
+
+        <figure class="post-cover img-holder" style="--width: 1602; --height: 903;">
+          <img src="../assets/images/featured-analyse-risques.png" width="1602" height="903"
+            alt="Analyse de données et évaluation des risques" class="img-cover">
+        </figure>
+
+        <div class="post-content">
+
+          <p>
+            Une analyse de risques cybersécurité efficace ne cherche pas l'exhaustivité absolue — recenser
+            littéralement tout ce qui pourrait mal tourner serait un exercice sans fin et peu utile. Elle
+            cherche la pertinence : identifier ce qui compte vraiment pour l'organisation, et construire à
+            partir de là un plan de traitement réaliste, aligné avec les enjeux métiers plutôt qu'avec les
+            seules préoccupations techniques. Des méthodologies reconnues comme l'ISO 27005 ou EBIOS Risk
+            Manager formalisent cette démarche, mais les principes qui suivent s'appliquent indépendamment
+            du cadre méthodologique précis retenu.
+          </p>
+
+          <h2 class="headline headline-3">Étape 1 — Identifier les actifs à protéger</h2>
+
+          <p>
+            Tout commence par un inventaire des actifs informationnels à protéger : données (clients,
+            financières, propriété intellectuelle), applications métiers, infrastructures techniques, mais
+            aussi processus opérationnels critiques dont l'interruption aurait un impact significatif sur
+            l'activité. Chaque actif recensé doit être associé à un niveau de criticité, établi en lien
+            direct avec son impact réel sur l'activité de l'organisation plutôt qu'avec sa seule complexité
+            technique. Une base de données clients et un serveur de test interne ne se voient évidemment
+            pas attribuer le même niveau de criticité, même si les deux méritent d'être recensés.
+          </p>
+
+          <h2 class="headline headline-3">Étape 2 — Identifier menaces et vulnérabilités</h2>
+
+          <p>
+            Pour chaque actif jugé suffisamment critique, l'étape suivante consiste à identifier les
+            menaces plausibles qui pourraient l'affecter (attaque externe, erreur humaine, panne technique,
+            départ non maîtrisé d'un collaborateur disposant d'accès sensibles) et les vulnérabilités
+            associées qui pourraient être exploitées. Cette étape gagne considérablement à associer deux
+            populations complémentaires : les équipes techniques, qui connaissent précisément les
+            faiblesses réelles des systèmes concernés, et les équipes métiers, qui connaissent les
+            conséquences opérationnelles concrètes d'un incident sur cet actif. Une analyse menée uniquement
+            par des profils techniques risque de sous-estimer l'impact métier réel ; menée uniquement par
+            des profils métiers, elle risque de passer à côté de vulnérabilités techniques bien réelles.
+          </p>
+
+          <h2 class="headline headline-3">Étape 3 — Évaluer probabilité et impact</h2>
+
+          <p>
+            Chaque risque identifié est ensuite évalué selon deux dimensions : sa probabilité d'occurrence
+            et son impact potentiel s'il se réalisait. La plupart des organisations utilisent pour cela une
+            matrice simple, par exemple sur une échelle de 1 à 5 pour chacune des deux dimensions, dont le
+            croisement permet de classer chaque risque en catégorie faible, modérée, élevée ou critique.
+            L'objectif de cet exercice n'est pas d'atteindre une précision mathématique illusoire — on ne
+            « calcule » pas un risque cyber avec la précision d'une formule physique — mais d'obtenir un
+            classement cohérent et partagé, qui permette de prioriser objectivement les actions à mener
+            plutôt que de traiter les risques dans l'ordre où ils viennent à l'esprit.
+          </p>
+
+          <h2 class="headline headline-3">Un exemple concret pour illustrer la démarche</h2>
+
+          <p>
+            Prenons le cas, très courant, d'une organisation qui envisage de migrer une application interne
+            vers un service cloud public. L'actif concerné est identifié : les données métiers traitées par
+            cette application, avec un niveau de criticité élevé si elles incluent des informations
+            clients. Les menaces et vulnérabilités associées à ce scénario incluent une mauvaise
+            configuration des droits d'accès sur le service cloud (une cause très fréquente de fuite de
+            données dans ce type de migration), ou une dépendance excessive à un unique prestataire sans
+            plan de réversibilité. L'évaluation croise une probabilité jugée modérée — le risque de
+            mauvaise configuration est réel mais maîtrisable avec les bonnes pratiques — à un impact jugé
+            élevé compte tenu de la sensibilité des données. Le risque obtenu, classé « élevé », débouche
+            sur un plan de traitement concret : réduire le risque via une revue systématique des droits
+            d'accès avant mise en production et un chiffrement des données au repos, plutôt que d'accepter
+            le risque tel quel ou de renoncer purement et simplement au projet de migration.
+          </p>
+
+          <h2 class="headline headline-3">Étape 4 — Construire le plan de traitement</h2>
+
+          <p>
+            Pour chaque risque jugé significatif, quatre options de traitement existent, et le choix entre
+            elles doit toujours être une décision explicite plutôt qu'un choix par défaut :
+          </p>
+
+          <p>
+            <strong>Réduire</strong> le risque, en mettant en œuvre des mesures de sécurité qui diminuent
+            sa probabilité d'occurrence, son impact, ou les deux — c'est l'option la plus courante et celle
+            à laquelle on pense en premier. <strong>Accepter</strong> le risque en connaissance de cause,
+            lorsque le coût du traitement dépasserait le bénéfice attendu au regard du niveau de risque
+            réel — une décision parfaitement légitime, à condition qu'elle soit explicite et validée par un
+            décideur habilité, et non simplement le résultat d'un oubli. <strong>Transférer</strong> le
+            risque, par exemple via une assurance cyber ou une clause contractuelle avec un prestataire, ce
+            qui ne l'élimine pas mais en déplace la charge financière. <strong>Éviter</strong> le risque, en
+            renonçant purement et simplement à l'activité qui l'engendre, lorsque son niveau est jugé
+            inacceptable et qu'aucune autre option n'est satisfaisante.
+          </p>
+
+          <p>
+            Quel que soit le choix retenu pour chaque risque, il doit être documenté et validé par les
+            décideurs concernés, avec un responsable clairement identifié et, le cas échéant, une échéance
+            de mise en œuvre. Une analyse de risques dont les conclusions restent dans un document jamais
+            revisité n'a, en pratique, produit aucune valeur réelle pour l'organisation.
+          </p>
+
+          <h2 class="headline headline-3">Étape 5 — Suivre le risque résiduel dans le temps</h2>
+
+          <p>
+            Une fois les mesures de traitement mises en œuvre, il subsiste presque toujours un risque
+            résiduel : le niveau de risque qui demeure après application des mesures choisies, jamais
+            réduit à zéro. Ce risque résiduel doit lui aussi être explicitement accepté par un décideur, et
+            surtout réévalué périodiquement, car le contexte évolue en permanence — nouvelles menaces,
+            nouveaux systèmes, changements organisationnels. Une analyse de risques figée au moment de sa
+            rédaction initiale perd rapidement de sa pertinence si elle n'est jamais mise à jour.
+          </p>
+
+          <blockquote>
+            « Une analyse de risques n'a de valeur que si elle débouche sur des décisions concrètes,
+            documentées et suivies dans le temps — pas si elle reste un document produit une fois, puis
+            oublié dans un tiroir. »
+          </blockquote>
+
+          <h2 class="headline headline-3">Ce qui distingue une bonne analyse d'un exercice de conformité</h2>
+
+          <p>
+            La différence entre une analyse de risques qui améliore réellement la sécurité d'une
+            organisation et un exercice de conformité de façade tient souvent à un seul facteur :
+            l'implication réelle des décideurs métiers dans les arbitrages, plutôt qu'une validation formelle
+            après coup d'un travail mené uniquement par les équipes techniques ou sécurité. C'est cette
+            implication qui garantit que les priorités retenues reflètent réellement les enjeux de
+            l'organisation, et que les décisions de traitement seront suivies d'effet plutôt que de rester
+            lettre morte.
+          </p>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card footer">
+
+        <div class="section footer-top">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana"></a>
+            <p class="footer-text"><strong>Emerick Dushimirimana</strong><br>Consultant Cybersécurité &amp; GRC</p>
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Navigation</p>
+            <ul>
+              <li><a href="../index.html" class="footer-link hover-2">Accueil</a></li>
+              <li><a href="../blog.html" class="footer-link hover-2">Blog</a></li>
+              <li><a href="../about.html" class="footer-link hover-2">À propos</a></li>
+              <li><a href="../mentions-legales.html" class="footer-link hover-2">Mentions légales</a></li>
+              <li><a href="../politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a></li><li><a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Réseaux</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a></li>
+              <li><a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a></li>
+              <li><a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+          <ul class="social-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon><span class="span">LinkedIn</span></a></li>
+            <li><a href="https://github.com/EmerickDushel" class="social-link"><ion-icon name="logo-github"></ion-icon><span class="span">GitHub</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn><ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon></a>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

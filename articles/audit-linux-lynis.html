@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Audit Linux avec Lynis : guide pratique - Emerick Dushimirimana</title>
+  <meta name="title" content="Audit Linux avec Lynis : guide pratique - Emerick Dushimirimana">
+  <meta name="description"
+    content="Installation, lancement d'un scan et lecture du rapport Lynis pour prioriser les actions de durcissement d'un système Linux.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Audit Linux avec Lynis : guide pratique">
+  <meta property="og:description" content="Auditer un système Linux avec Lynis et interpréter ses résultats.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/featured-audit-lynis.png">
+  <link rel="canonical" href="https://emerickd.com/articles/audit-linux-lynis.html">
+
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana"></a>
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="../index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a></li>
+          <li><a href="../blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a></li>
+          <li><a href="../about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a></li>
+        </ul>
+
+        <div class="navbar-bottom">
+          <div class="profile-card">
+            <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+            <div>
+              <p class="card-title">Emerick Dushimirimana</p>
+              <p class="card-subtitle">Consultant Cybersécurité &amp; GRC</p>
+            </div>
+          </div>
+          <ul class="link-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a></li>
+            <li><a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a></li>
+          </ul>
+        </div>
+
+        <p class="copyright-text">© 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+      </nav>
+
+      <a href="../index.html#newsletter" class="btn btn-primary">S'abonner</a>
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler><ion-icon name="menu-outline" aria-hidden="true"></ion-icon></button>
+
+    </div>
+  </header>
+
+  <main>
+    <article class="section post" aria-labelledby="post-title">
+      <div class="container post-container">
+
+        <div class="post-header">
+
+          <div class="card-tag">
+            <a href="../blog.html" class="span hover-2">#Linux</a>
+            <a href="../blog.html" class="span hover-2">#Audit</a>
+          </div>
+
+          <h1 class="headline headline-1 post-title" id="post-title">
+            Audit Linux avec Lynis : guide pratique
+          </h1>
+
+          <div class="card-wrapper post-meta">
+            <div class="profile-card">
+              <img src="../assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana" class="profile-banner">
+              <div>
+                <p class="card-title">Emerick Dushimirimana</p>
+                <time class="card-subtitle publish-date" datetime="2026-07-29">29 juillet 2026</time>
+              </div>
+            </div>
+            <div class="wrapper">
+              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+              <span class="span">8 min de lecture</span>
+            </div>
+          </div>
+
+        </div>
+
+        <figure class="post-cover img-holder" style="--width: 1602; --height: 903;">
+          <img src="../assets/images/featured-audit-lynis.png" width="1602" height="903"
+            alt="Audit de sécurité d'un système Linux" class="img-cover">
+        </figure>
+
+        <div class="post-content">
+
+          <p>
+            Sécuriser un système Linux à l'instinct, sans méthode, conduit presque toujours à laisser passer
+            des points de configuration importants — soit parce qu'ils sont peu connus, soit simplement
+            parce qu'on ne pense pas à les vérifier. Lynis est un outil d'audit open source, développé
+            depuis plus de quinze ans, qui répond exactement à ce problème : il analyse systématiquement la
+            configuration d'un système Linux ou Unix et propose des recommandations de durcissement,
+            classées par domaine. Il ne corrige rien automatiquement — et c'est en réalité une qualité,
+            pas une limite : il sert de base structurée pour prioriser les actions, en laissant
+            l'administrateur décider en connaissance de cause.
+          </p>
+
+          <h2 class="headline headline-3">Installation</h2>
+
+          <p>
+            Lynis s'installe de deux façons principales. La plus simple consiste à utiliser le gestionnaire
+            de paquets de la distribution, lorsqu'il est disponible :
+          </p>
+
+          <pre><code>apt install lynis        # Debian / Ubuntu
+dnf install lynis         # Fedora / RHEL</code></pre>
+
+          <p>
+            Pour disposer systématiquement de la dernière version, y compris ses derniers tests, il est
+            également possible de cloner directement le dépôt officiel du projet, ce qui évite de dépendre
+            du rythme de mise à jour des paquets de la distribution.
+          </p>
+
+          <h2 class="headline headline-3">Lancer un premier scan</h2>
+
+          <p>
+            Un scan complet du système se lance avec une seule commande :
+          </p>
+
+          <pre><code>lynis audit system</code></pre>
+
+          <p>
+            Ce scan s'exécute entièrement en local, sans envoyer la moindre donnée à l'extérieur — un point
+            important pour un outil destiné à être utilisé sur des serveurs de production, potentiellement
+            sensibles. Il examine successivement plusieurs dizaines de catégories : informations système,
+            gestion des paquets et mises à jour disponibles, configuration du démarrage, authentification et
+            mots de passe, configuration du noyau, pare-feu, services réseau en écoute, journalisation,
+            planification des tâches, permissions de fichiers sensibles, et bien d'autres. Pour un audit
+            orienté spécifiquement sur la posture offensive du système (utile en amont d'un test
+            d'intrusion), l'option <code>--pentest</code> ajoute des vérifications supplémentaires
+            pertinentes dans ce contexte.
+          </p>
+
+          <h2 class="headline headline-3">Lire le rapport et le hardening index</h2>
+
+          <p>
+            À la fin du scan, Lynis affiche un résumé directement dans le terminal, ainsi qu'un score
+            appelé « hardening index », noté sur 100. Ce score synthétise le niveau général de durcissement
+            du système au regard de l'ensemble des tests effectués. Il est important de le considérer pour
+            ce qu'il est : un indicateur de tendance et un point de comparaison dans le temps — utile pour
+            suivre l'évolution d'un même serveur d'un audit à l'autre — plutôt qu'un objectif à maximiser
+            aveuglément. Un score de 100 n'existe pratiquement jamais en pratique, et ce n'est pas
+            nécessairement souhaitable : certains tests ne s'appliquent simplement pas à tous les contextes.
+          </p>
+
+          <p>
+            Le rapport détaillé, bien plus riche que le résumé affiché à l'écran, est enregistré dans deux
+            fichiers : <code>/var/log/lynis.log</code> contient le journal complet et lisible de l'exécution
+            du scan, tandis que <code>/var/log/lynis-report.dat</code> contient les résultats sous une forme
+            structurée, exploitable par des scripts pour automatiser le suivi dans le temps ou l'intégration
+            à d'autres outils.
+          </p>
+
+          <h2 class="headline headline-3">Les grandes catégories de contrôles</h2>
+
+          <p>
+            Il est utile de connaître, au moins dans les grandes lignes, les principales familles de
+            contrôles que Lynis exécute, pour mieux interpréter le rapport final. La catégorie
+            « authentification » vérifie notamment la politique de mots de passe, la configuration de
+            <code>PAM</code> et les comptes disposant de droits élevés. La catégorie « pare-feu » contrôle
+            qu'un pare-feu est actif et correctement configuré, plutôt que simplement installé sans être
+            appliqué. La catégorie « noyau » (kernel) examine les paramètres <code>sysctl</code> liés à la
+            sécurité réseau et à la protection mémoire. La catégorie « journalisation » vérifie que les
+            événements systèmes sont bien enregistrés et, idéalement, transmis vers un système de
+            centralisation externe. Enfin, la catégorie « permissions de fichiers » recherche les fichiers
+            sensibles dont les droits d'accès sont anormalement permissifs, un défaut de configuration
+            classique et pourtant régulièrement rencontré même sur des systèmes globalement bien tenus.
+          </p>
+
+          <h2 class="headline headline-3">Comprendre une suggestion typique</h2>
+
+          <p>
+            Chaque suggestion émise par Lynis est associée à un identifiant unique (par exemple
+            <code>AUTH-9262</code> pour une recommandation liée aux mots de passe), une brève explication du
+            problème identifié, et souvent un lien vers la documentation officielle du projet pour approfondir
+            le sujet. Une suggestion typique pourrait signaler, par exemple, l'absence de règle de
+            complexité minimale sur les mots de passe locaux, ou la présence de services réseau en écoute
+            qui ne semblent pas nécessaires au rôle du serveur. Dans les deux cas, Lynis ne se contente pas
+            de signaler le problème : il indique généralement la piste de correction à suivre, charge ensuite
+            à l'administrateur de l'appliquer après vérification.
+          </p>
+
+          <h2 class="headline headline-3">Prioriser plutôt qu'appliquer aveuglément</h2>
+
+          <p>
+            Toutes les suggestions ne se valent pas, et c'est précisément l'étape la plus importante — et la
+            plus souvent négligée — de l'utilisation de Lynis. Une recommandation pertinente sur un poste de
+            travail individuel peut être inutile, voire contre-productive, sur un serveur applicatif dédié
+            fonctionnant dans un environnement contrôlé. À l'inverse, certaines suggestions marquées comme
+            secondaires par l'outil peuvent s'avérer critiques compte tenu du contexte spécifique du
+            système audité — les données qu'il héberge, son exposition réseau, sa criticité pour l'activité.
+            L'audit automatisé doit donc toujours être suivi d'une analyse humaine avant application, qui
+            confronte chaque suggestion à la réalité opérationnelle du système concerné.
+          </p>
+
+          <p>
+            Lynis permet d'ailleurs de formaliser une partie de ce travail de contextualisation via des
+            profils personnalisés (<code>custom.prf</code>), qui permettent d'exclure explicitement certains
+            tests jugés non pertinents pour une catégorie de machines donnée, avec une justification
+            documentée. Cette approche est préférable à l'ignorance silencieuse d'une suggestion à chaque
+            exécution : elle laisse une trace claire de la décision prise et de sa justification, utile
+            lors d'un audit ultérieur ou d'une revue par une autre personne que celle qui a fait le choix
+            initial.
+          </p>
+
+          <h2 class="headline headline-3">Suivre l'évolution dans le temps</h2>
+
+          <p>
+            L'intérêt de Lynis ne se limite pas à un audit ponctuel. Exécuté régulièrement — par exemple via
+            une tâche planifiée mensuelle — et en conservant l'historique des scores et des suggestions
+            traitées, il permet de suivre objectivement la progression du durcissement d'un parc de serveurs
+            dans la durée, et de détecter rapidement une régression de configuration, par exemple à la suite
+            d'une mise à jour système ou de l'installation d'un nouveau service qui aurait rouvert un point
+            d'attention déjà traité auparavant.
+          </p>
+
+          <blockquote>
+            « Un outil d'audit donne des pistes, pas des décisions. C'est à l'administrateur de juger de la
+            pertinence de chaque recommandation dans son contexte réel, et non à l'outil de décider à sa
+            place. »
+          </blockquote>
+
+          <h2 class="headline headline-3">Intégrer Lynis à un parc de serveurs</h2>
+
+          <p>
+            Sur un parc comportant plusieurs dizaines ou centaines de machines, exécuter Lynis
+            manuellement serveur par serveur devient rapidement impraticable. Le fichier de résultats
+            structuré (<code>lynis-report.dat</code>) se prête bien à une exploitation automatisée : un
+            script simple peut centraliser les résultats de l'ensemble du parc, générer un tableau de bord
+            comparatif entre machines, ou déclencher une alerte lorsque le hardening index d'un serveur
+            chute brutalement d'un scan à l'autre. Cette approche transforme un outil d'audit ponctuel en un
+            véritable indicateur de suivi continu de la posture de sécurité du parc, intégrable aux
+            pipelines d'intégration continue pour les environnements provisionnés automatiquement.
+          </p>
+
+          <h2 class="headline headline-3">Comment Lynis se situe par rapport à d'autres approches</h2>
+
+          <p>
+            Lynis n'est pas le seul outil de ce type : des solutions comme OpenSCAP permettent d'évaluer un
+            système au regard de référentiels normés comme les CIS Benchmarks, avec une approche plus
+            formelle et davantage tournée vers la conformité réglementaire. Ces outils ne s'opposent pas :
+            Lynis se distingue par sa simplicité de mise en œuvre, l'absence totale de dépendance à un
+            service externe, et une lisibilité immédiate de ses résultats, ce qui en fait un excellent
+            premier réflexe avant d'envisager, si le contexte réglementaire l'exige, une démarche de
+            conformité plus formelle et documentée face à un référentiel spécifique.
+          </p>
+
+          <h2 class="headline headline-3">Les limites à garder en tête</h2>
+
+          <p>
+            Lynis reste un outil d'audit de configuration : il évalue la façon dont le système est
+            paramétré, mais ne remplace ni une analyse de risques complète, ni un test d'intrusion, qui
+            chercherait activement à exploiter des faiblesses plutôt qu'à les lister. Il ne détecte pas non
+            plus les vulnérabilités liées à la logique métier des applications hébergées sur le serveur. Il
+            constitue en revanche un excellent point de départ, rapide à mettre en œuvre et peu coûteux, pour
+            identifier l'essentiel des écarts de configuration avant d'engager, si le contexte le justifie,
+            des démarches d'audit plus approfondies.
+          </p>
+
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="card footer">
+
+        <div class="section footer-top">
+          <div class="footer-brand">
+            <a href="../index.html" class="logo"><img src="../assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana"></a>
+            <p class="footer-text"><strong>Emerick Dushimirimana</strong><br>Consultant Cybersécurité &amp; GRC</p>
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Navigation</p>
+            <ul>
+              <li><a href="../index.html" class="footer-link hover-2">Accueil</a></li>
+              <li><a href="../blog.html" class="footer-link hover-2">Blog</a></li>
+              <li><a href="../about.html" class="footer-link hover-2">À propos</a></li>
+              <li><a href="../mentions-legales.html" class="footer-link hover-2">Mentions légales</a></li>
+              <li><a href="../politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a></li><li><a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="footer-list-title">Réseaux</p>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a></li>
+              <li><a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a></li>
+              <li><a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Emerick Dushimirimana. Tous droits réservés.</p>
+          <ul class="social-list">
+            <li><a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon><span class="span">LinkedIn</span></a></li>
+            <li><a href="https://github.com/EmerickDushel" class="social-link"><ion-icon name="logo-github"></ion-icon><span class="span">GitHub</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn><ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon></a>
+
+  <script src="../assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

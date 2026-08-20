@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Blog - Emerick Dushimirimana</title>
+  <meta name="title" content="Blog - Emerick Dushimirimana">
+  <meta name="description"
+    content="Tous les articles d'Emerick Dushimirimana : cybersécurité, GRC, gestion des risques, ISO 27001, sécurité opérationnelle et pentest.">
+  <meta name="author" content="Emerick Dushimirimana">
+
+  <!--
+    - open graph
+  -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Blog - Emerick Dushimirimana">
+  <meta property="og:description"
+    content="Analyses, guides pratiques et retours d'expérience autour de la cybersécurité, de la GRC et de la sécurité technique.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/profile-photo.png">
+  <link rel="canonical" href="https://emerickd.com/blog.html">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/png">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body id="top">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a>
+          </li>
+
+          <li>
+            <a href="./blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a>
+          </li>
+
+          <li>
+            <a href="./about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a>
+          </li>
+
+        </ul>
+
+        <div class="navbar-bottom">
+
+          <div class="profile-card">
+            <img src="./assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana"
+              class="profile-banner">
+
+            <div>
+              <p class="card-title">Emerick</p>
+
+              <p class="card-subtitle">
+                Consultant Cybersécurité &amp; GRC
+              </p>
+            </div>
+          </div>
+
+          <ul class="link-list">
+
+            <li>
+              <a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a>
+            </li>
+
+            <li>
+              <a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <p class="copyright-text">
+          © 2026 Emerick Dushimirimana. Tous droits réservés.
+        </p>
+
+      </nav>
+
+      <a href="./index.html#newsletter" class="btn btn-primary">S'abonner</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!--
+        - #BLOG HEADER + #ALL ARTICLES
+      -->
+
+      <section class="section blog-list" aria-labelledby="blog-title">
+        <div class="container">
+
+          <h1 class="headline headline-1 section-title" id="blog-title">Blog</h1>
+
+          <p class="section-text">
+            Analyses, guides pratiques et retours d'expérience autour de la cybersécurité, de la GRC et de
+            la sécurité technique.
+          </p>
+
+          <div class="filter-notice" data-filter-notice hidden>
+            <p class="filter-notice-text">
+              Filtré par tag : <strong data-filter-label></strong>
+              &middot; <a href="./blog.html" class="hover-2">Voir tous les articles</a>
+            </p>
+          </div>
+
+          <ul class="grid-list blog-grid" data-blog-grid>
+
+            <li data-tags="linux hardening">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/recent-securiser-linux.jpg" width="271" height="258" loading="lazy"
+                    alt="Sécuriser un serveur Linux : les contrôles essentiels" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/securiser-serveur-linux.html" class="card-badge">Linux</a>
+
+                    <time class="recent-date" datetime="2026-08-18">18 août 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/securiser-serveur-linux.html" class="link hover-2">Sécuriser un serveur Linux : les contrôles essentiels</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Un tour d'horizon des contrôles indispensables pour durcir un serveur Linux exposé, de
+                    la gestion des comptes aux services réseau en passant par le pare-feu.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=linux" class="span hover-2"># Linux</a>
+                      <a href="./blog.html?tag=hardening" class="span hover-2"># Hardening</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">6 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="pentest websecurity">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/recent-burp-suite.jpg" width="271" height="258" loading="lazy"
+                    alt="Burp Suite : guide pratique pour débuter en pentest Web" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/burp-suite-guide-pentest-web.html" class="card-badge">Pentest</a>
+
+                    <time class="recent-date" datetime="2026-08-14">14 août 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/burp-suite-guide-pentest-web.html" class="link hover-2">Burp Suite : guide pratique pour débuter en pentest Web</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Prise en main de Burp Suite : proxy d'interception, repeater et scanner passif pour
+                    commencer à tester la sécurité d'une application Web.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=pentest" class="span hover-2"># Pentest</a>
+                      <a href="./blog.html?tag=websecurity" class="span hover-2"># WebSecurity</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">7 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="grc iso27001">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/popular-iso27001-smsi.jpg" width="271" height="258" loading="lazy"
+                    alt="ISO 27001 : les étapes essentielles pour structurer un SMSI" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/iso27001-smsi-etapes.html" class="card-badge">GRC</a>
+
+                    <time class="recent-date" datetime="2026-08-12">12 août 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/iso27001-smsi-etapes.html" class="link hover-2">ISO 27001 : les étapes essentielles pour structurer un SMSI</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Politique de sécurité, périmètre, analyse de risques, contrôles de l'Annexe A : les
+                    briques à assembler pour structurer un système de management de la sécurité.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=grc" class="span hover-2"># GRC</a>
+                      <a href="./blog.html?tag=iso27001" class="span hover-2"># ISO27001</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">7 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="grc iso27001">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/recent-iso27001-audit-interne.jpg" width="271" height="258" loading="lazy"
+                    alt="ISO 27001 : comment préparer efficacement un audit interne" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/iso27001-audit-interne.html" class="card-badge">GRC</a>
+
+                    <time class="recent-date" datetime="2026-08-09">9 août 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/iso27001-audit-interne.html" class="link hover-2">ISO 27001 : comment préparer efficacement un audit interne</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Méthodologie, documents à réunir et pièges à éviter pour aborder sereinement un audit
+                    interne dans le cadre d'un SMSI certifié ISO 27001.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=grc" class="span hover-2"># GRC</a>
+                      <a href="./blog.html?tag=iso27001" class="span hover-2"># ISO27001</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">5 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="riskmanagement grc">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/popular-analyse-risques.jpg" width="271" height="258" loading="lazy"
+                    alt="Comment réaliser une analyse de risques cybersécurité ?" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/analyse-risques-cybersecurite.html" class="card-badge">Gestion des risques</a>
+
+                    <time class="recent-date" datetime="2026-08-05">5 août 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/analyse-risques-cybersecurite.html" class="link hover-2">Comment réaliser une analyse de risques cybersécurité ?</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Une approche pratique pour identifier les actifs, les menaces, les vulnérabilités et
+                    construire un plan de traitement adapté aux enjeux métiers.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=riskmanagement" class="span hover-2"># RiskManagement</a>
+                      <a href="./blog.html?tag=grc" class="span hover-2"># GRC</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">6 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="riskmanagement grc">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/recent-risque-menace-vulnerabilite.jpg" width="271" height="258" loading="lazy"
+                    alt="Comprendre la différence entre risque, menace et vulnérabilité" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/risque-menace-vulnerabilite.html" class="card-badge">Gestion des risques</a>
+
+                    <time class="recent-date" datetime="2026-08-03">3 août 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/risque-menace-vulnerabilite.html" class="link hover-2">Comprendre la différence entre risque, menace et vulnérabilité</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Trois notions souvent confondues mais essentielles pour construire une analyse de
+                    risques rigoureuse et un langage commun avec les métiers.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=riskmanagement" class="span hover-2"># RiskManagement</a>
+                      <a href="./blog.html?tag=grc" class="span hover-2"># GRC</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">4 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="linux audit">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/popular-audit-lynis.jpg" width="271" height="258" loading="lazy"
+                    alt="Audit Linux avec Lynis : guide pratique" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/audit-linux-lynis.html" class="card-badge">Linux</a>
+
+                    <time class="recent-date" datetime="2026-07-29">29 juillet 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/audit-linux-lynis.html" class="link hover-2">Audit Linux avec Lynis : guide pratique</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Installation, lancement d'un scan et lecture du rapport Lynis pour prioriser les
+                    actions de durcissement d'un système Linux.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=linux" class="span hover-2"># Linux</a>
+                      <a href="./blog.html?tag=audit" class="span hover-2"># Audit</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">8 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li data-tags="pentest owasp">
+              <div class="recent-post-card">
+
+                <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
+                  <img src="./assets/images/popular-owasp-top10.jpg" width="271" height="258" loading="lazy"
+                    alt="OWASP Top 10 : comprendre les principales vulnérabilités Web" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="card-wrapper">
+                    <a href="./articles/owasp-top10-vulnerabilites-web.html" class="card-badge">Pentest</a>
+
+                    <time class="recent-date" datetime="2026-07-20">20 juillet 2026</time>
+                  </div>
+
+                  <h2 class="headline headline-3 card-title">
+                    <a href="./articles/owasp-top10-vulnerabilites-web.html" class="link hover-2">OWASP Top 10 : comprendre les principales vulnérabilités Web</a>
+                  </h2>
+
+                  <p class="card-text">
+                    Présentation des principales familles de vulnérabilités Web et des bonnes pratiques
+                    permettant de réduire les risques applicatifs.
+                  </p>
+
+                  <div class="card-wrapper">
+                    <div class="card-tag">
+                      <a href="./blog.html?tag=pentest" class="span hover-2"># Pentest</a>
+                      <a href="./blog.html?tag=owasp" class="span hover-2"># OWASP</a>
+                    </div>
+
+                    <div class="wrapper">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                      <span class="span">6 min de lecture</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+          <nav aria-label="pagination" class="pagination" data-blog-pagination></nav>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana">
+            </a>
+
+            <p class="footer-text">
+              <strong>Emerick Dushimirimana</strong><br>
+              Consultant Cybersécurité &amp; GRC
+            </p>
+
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Navigation</p>
+
+            <ul>
+
+              <li>
+                <a href="./index.html" class="footer-link hover-2">Accueil</a>
+              </li>
+
+              <li>
+                <a href="./blog.html" class="footer-link hover-2">Blog</a>
+              </li>
+
+              <li>
+                <a href="./about.html" class="footer-link hover-2">À propos</a>
+              </li>
+
+              <li>
+                <a href="./mentions-legales.html" class="footer-link hover-2">Mentions légales</a>
+              </li>
+
+              <li>
+                <a href="./politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Réseaux</p>
+
+            <ul>
+
+              <li>
+                <a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a>
+              </li>
+
+              <li>
+                <a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a>
+              </li>
+
+              <li>
+                <a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; 2026 Emerick Dushimirimana. Tous droits réservés.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/EmerickDushel" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
+
+                <span class="span">GitHub</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!--
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 
+  <!--
     - primary meta tags
   -->
-  <title>Edu - Perosonal Blog Website</title>
-  <meta name="title" content="Edu - Perosonal Blog Website">
-  <meta name="description" content="This is a blog html template made by codewithsadee">
+  <title>Emerick Dushimirimana | Cybersécurité, GRC & Pentest</title>
+  <meta name="title" content="Emerick Dushimirimana | Cybersécurité, GRC & Pentest">
+  <meta name="description"
+    content="Blog d'Emerick Dushimirimana consacré à la cybersécurité, la GRC, la gestion des risques, ISO 27001, la sécurité opérationnelle et le pentest. Retrouvez analyses, guides et tutoriels pratiques.">
+  <meta name="author" content="Emerick Dushimirimana">
 
-  <!-- 
+  <!--
+    - open graph
+  -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Emerick Dushimirimana | Cybersécurité, GRC & Pentest">
+  <meta property="og:description"
+    content="Analyses, guides pratiques et retours d'expérience autour de la cybersécurité, de la gouvernance, des risques, de la conformité et de la sécurité opérationnelle.">
+  <meta property="og:image" content="https://emerickd.com/assets/images/profile-photo.png">
+  <link rel="canonical" href="https://emerickd.com/">
+
+  <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./favicon.png" type="image/png">
 
-  <!-- 
+  <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,15 +39,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- 
+  <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
+  <!--
     - preload images
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/profile-photo.png">
   <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
   <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
 
@@ -42,22 +55,22 @@
 
 <body id="top">
 
-  <!-- 
+  <!--
     - #HEADER
   -->
 
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="119" height="37" alt="Edu logo">
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="119" height="37" alt="Edu logo">
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.png" width="91" height="37" alt="Emerick Dushimirimana">
           </a>
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
@@ -68,23 +81,15 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+            <a href="./index.html" class="navbar-link hover-1" data-nav-toggler>Accueil</a>
           </li>
 
           <li>
-            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Topics</a>
+            <a href="./blog.html" class="navbar-link hover-1" data-nav-toggler>Blog</a>
           </li>
 
           <li>
-            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Featured Post</a>
-          </li>
-
-          <li>
-            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Recent Post</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+            <a href="./about.html" class="navbar-link hover-1" data-nav-toggler>À propos</a>
           </li>
 
         </ul>
@@ -92,13 +97,14 @@
         <div class="navbar-bottom">
 
           <div class="profile-card">
-            <img src="./assets/images/author-1.png" width="48" height="48" alt="Steven" class="profile-banner">
+            <img src="./assets/images/author-emerick-dushel.png" width="48" height="48" alt="Emerick Dushimirimana"
+              class="profile-banner">
 
             <div>
-              <p class="card-title">Hello Steven !</p>
+              <p class="card-title">Emerick</p>
 
               <p class="card-subtitle">
-                You have 3 new messages
+                Consultant Cybersécurité &amp; GRC
               </p>
             </div>
           </div>
@@ -106,27 +112,11 @@
           <ul class="link-list">
 
             <li>
-              <a href="#" class="navbar-bottom-link hover-1">Profile</a>
+              <a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="navbar-bottom-link hover-1">LinkedIn</a>
             </li>
 
             <li>
-              <a href="#" class="navbar-bottom-link hover-1">Articles Saved</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Add New Post</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">My Likes</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Account Setting</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Sign Out</a>
+              <a href="https://github.com/EmerickDushel" class="navbar-bottom-link hover-1">GitHub</a>
             </li>
 
           </ul>
@@ -134,13 +124,12 @@
         </div>
 
         <p class="copyright-text">
-          Copyright 2022 © Edu - Personal Blog Template.
-          Developed by codewithsadee
+          © 2026 Emerick Dushimirimana. Tous droits réservés.
         </p>
 
       </nav>
 
-      <a href="#" class="btn btn-primary">Subscribe</a>
+      <a href="#newsletter" class="btn btn-primary">S'abonner</a>
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
@@ -156,8 +145,9 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
+        - aucun bouton : demande explicite, la navigation suffit
       -->
 
       <section class="hero" id="home" aria-label="home">
@@ -165,35 +155,30 @@
 
           <div class="hero-content">
 
-            <p class="hero-subtitle">Hello Everyone!</p>
+            <p class="hero-subtitle">Bonjour, je suis</p>
 
             <h1 class="headline headline-1 section-title">
-              I’m <span class="span">Edu Clark</span>
+              <span class="span">Emerick</span>
             </h1>
 
+            <p class="hero-role">Consultant Cybersécurité &amp; GRC</p>
+
             <p class="hero-text">
-              I use animation as a third dimension by which to simplify experiences and kuiding thro each and every
-              interaction. I’m not adding motion just to spruce things up, but doing it in ways that.
+              Analyses, guides pratiques et retours d'expérience autour de la cybersécurité, de la gouvernance,
+              des risques, de la conformité et de la sécurité opérationnelle.
             </p>
 
-            <div class="input-wrapper">
-
-              <input type="email" name="email_address" placeholder="Type your email address" required
-                class="input-field" autocomplete="off">
-
-              <button class="btn btn-primary">
-                <span class="span">Subscribe</span>
-
-                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-            </div>
+            <p class="hero-text">
+              J'explore aussi bien les enjeux organisationnels que les aspects techniques de la cybersécurité
+              afin de proposer des contenus utiles, accessibles et directement applicables.
+            </p>
 
           </div>
 
           <div class="hero-banner">
 
-            <img src="./assets/images/hero-banner.png" width="327" height="490" alt="Edu Clark" class="w-100">
+            <img src="./assets/images/profile-photo.png" width="327" height="388"
+              alt="Emerick Dushimirimana, Consultant Cybersécurité et GRC" class="w-100">
 
             <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
 
@@ -212,11 +197,12 @@
 
 
 
-      <!-- 
+      <!--
         - #TOPICS
+        - Sujets à la une : thématiques éditoriales, pas des liens de menu
       -->
 
-      <section class="topics" id="topics" aria-labelledby="topic-label">
+      <section class="topics" id="topics" aria-label="topics">
         <div class="container">
 
           <div class="card topic-card">
@@ -224,11 +210,12 @@
             <div class="card-content">
 
               <h2 class="headline headline-2 section-title card-title" id="topic-label">
-                Hot topics
+                Sujets à la une
               </h2>
 
               <p class="card-text">
-                Don't miss out on the latest news about Travel tips, Hotels review, Food guide...
+                Gouvernance, risques, conformité et sécurité technique : les grandes thématiques traitées
+                sur ce blog.
               </p>
 
               <div class="btn-group">
@@ -247,85 +234,102 @@
               <ul class="slider-list" data-slider-container>
 
                 <li class="slider-item">
-                  <a href="#" class="slider-card">
+                  <a href="./blog.html?tag=grc" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-1.png" width="507" height="618" loading="lazy" alt="Sport"
+                      <img src="./assets/images/topic-grc.png" width="507" height="618" loading="lazy" alt="GRC"
                         class="img-cover">
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Sport</span>
+                      <span class="slider-title">GRC</span>
 
-                      <p class="slider-subtitle">38 Articles</p>
+                      <p class="slider-subtitle">Gouvernance, risques &amp; conformité</p>
                     </div>
 
                   </a>
                 </li>
 
                 <li class="slider-item">
-                  <a href="#" class="slider-card">
+                  <a href="./blog.html?tag=iso27001" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-2.png" width="507" height="618" loading="lazy" alt="Travel"
-                        class="img-cover">
+                      <img src="./assets/images/topic-iso27001.png" width="507" height="618" loading="lazy"
+                        alt="ISO 27001" class="img-cover">
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Travel</span>
+                      <span class="slider-title">ISO 27001</span>
 
-                      <p class="slider-subtitle">63 Articles</p>
+                      <p class="slider-subtitle">Systèmes de management de la sécurité</p>
                     </div>
 
                   </a>
                 </li>
 
                 <li class="slider-item">
-                  <a href="#" class="slider-card">
+                  <a href="./blog.html?tag=riskmanagement" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-3.png" width="507" height="618" loading="lazy" alt="Design"
-                        class="img-cover">
+                      <img src="./assets/images/topic-gestion-risques.png" width="507" height="618" loading="lazy"
+                        alt="Gestion des risques" class="img-cover">
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Design</span>
+                      <span class="slider-title">Gestion des risques</span>
 
-                      <p class="slider-subtitle">78 Articles</p>
+                      <p class="slider-subtitle">Identifier, évaluer, traiter</p>
                     </div>
 
                   </a>
                 </li>
 
                 <li class="slider-item">
-                  <a href="#" class="slider-card">
+                  <a href="./blog.html?tag=pentest" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-4.png" width="507" height="618" loading="lazy" alt="Movie"
-                        class="img-cover">
+                      <img src="./assets/images/topic-pentest-web.png" width="507" height="618" loading="lazy"
+                        alt="Pentest Web" class="img-cover">
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Movie</span>
+                      <span class="slider-title">Pentest Web</span>
 
-                      <p class="slider-subtitle">125 Articles</p>
+                      <p class="slider-subtitle">Méthodologies &amp; outils</p>
                     </div>
 
                   </a>
                 </li>
 
                 <li class="slider-item">
-                  <a href="#" class="slider-card">
+                  <a href="./blog.html?tag=linux" class="slider-card">
 
                     <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-5.png" width="507" height="618" loading="lazy" alt="Lifestyle"
+                      <img src="./assets/images/topic-securite-linux.png" width="507" height="618" loading="lazy"
+                        alt="Sécurité Linux" class="img-cover">
+                    </figure>
+
+                    <div class="slider-content">
+                      <span class="slider-title">Sécurité Linux</span>
+
+                      <p class="slider-subtitle">Audit &amp; durcissement</p>
+                    </div>
+
+                  </a>
+                </li>
+
+                <li class="slider-item">
+                  <a href="./blog.html?tag=owasp" class="slider-card">
+
+                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
+                      <img src="./assets/images/topic-owasp.png" width="507" height="618" loading="lazy" alt="OWASP"
                         class="img-cover">
                     </figure>
 
                     <div class="slider-content">
-                      <span class="slider-title">Lifestyle</span>
+                      <span class="slider-title">OWASP</span>
 
-                      <p class="slider-subtitle">78 Articles</p>
+                      <p class="slider-subtitle">Vulnérabilités applicatives</p>
                     </div>
 
                   </a>
@@ -343,439 +347,32 @@
 
 
 
-      <!-- 
-        - #FEATURED POST
-      -->
-
-      <section class="section feature" aria-label="feature" id="featured">
-        <div class="container">
-
-          <h2 class="headline headline-2 section-title">
-            <span class="span">Editor's picked</span>
-          </h2>
-
-          <p class="section-text">
-            Featured and highly rated articles
-          </p>
-
-          <ul class="feature-list">
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-1.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Travel</a>
-
-                      <a href="#" class="span hover-2">#Lifestyle</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">3 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-2.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
-
-                      <a href="#" class="span hover-2">#Movie</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-3.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
-
-                      <a href="#" class="span hover-2">#Movie</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-4.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
-
-                      <a href="#" class="span hover-2">#Movie</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-5.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Design</a>
-
-                      <a href="#" class="span hover-2">#Movie</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Self-observation is the first step of inner unfolding
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">Joseph</p>
-
-                        <p class="card-subtitle">25 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="#" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="#" class="btn btn-secondary">
-            <span class="span">Show More Posts</span>
-
-            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-          </a>
-
-        </div>
-
-        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #POPULAR TAGS
-      -->
-
-      <section class="tags" aria-labelledby="tag-label">
-        <div class="container">
-
-          <h2 class="headline headline-2 section-title" id="tag-label">
-            <span class="span">Popular Tags</span>
-          </h2>
-
-          <p class="section-text">
-            Most searched keywords
-          </p>
-
-          <ul class="grid-list">
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag1.png" width="32" height="32" loading="lazy" alt="Travel">
-
-                <p class="btn-text">Travel</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag2.png" width="32" height="32" loading="lazy" alt="Culture">
-
-                <p class="btn-text">Culture</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
-
-                <p class="btn-text">Lifestyle</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag4.png" width="32" height="32" loading="lazy" alt="Fashion">
-
-                <p class="btn-text">Fashion</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag5.png" width="32" height="32" loading="lazy" alt="Food">
-
-                <p class="btn-text">Food</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag6.png" width="32" height="32" loading="lazy" alt="Space">
-
-                <p class="btn-text">Space</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag7.png" width="32" height="32" loading="lazy" alt="Animal">
-
-                <p class="btn-text">Animal</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag8.png" width="32" height="32" loading="lazy" alt="Minimal">
-
-                <p class="btn-text">Minimal</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag9.png" width="32" height="32" loading="lazy" alt="Interior">
-
-                <p class="btn-text">Interior</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag10.png" width="32" height="32" loading="lazy" alt="Plant">
-
-                <p class="btn-text">Plant</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag11.png" width="32" height="32" loading="lazy" alt="Nature">
-
-                <p class="btn-text">Nature</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag12.png" width="32" height="32" loading="lazy" alt="Business">
-
-                <p class="btn-text">Business</p>
-              </button>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #RECENT POST
+      <!--
+        - #ARTICLES RÉCENTS
+        - 4 articles maximum, toujours les plus récents
       -->
 
       <section class="section recent-post" id="recent" aria-labelledby="recent-label">
         <div class="container">
 
-          <div class="post-main">
+          <div class="recent-post-header">
 
-            <h2 class="headline headline-2 section-title">
-              <span class="span">Recent posts</span>
+            <h2 class="headline headline-2 section-title" id="recent-label">
+              <span class="span">Articles récents</span>
             </h2>
 
             <p class="section-text">
-              Don't miss the latest trends
+              Analyses, guides et retours d'expérience récents
             </p>
+
+            <a href="./blog.html" class="view-all-link hover-2">
+              Voir tous les articles
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+          <div class="post-main">
 
             <ul class="grid-list">
 
@@ -783,34 +380,38 @@
                 <div class="recent-post-card">
 
                   <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/recent-post-1.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                    <img src="./assets/images/recent-securiser-linux.jpg" width="271" height="258" loading="lazy"
+                      alt="Sécuriser un serveur Linux : les contrôles essentiels" class="img-cover">
                   </figure>
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
+                    <div class="card-wrapper">
+                      <a href="./articles/securiser-serveur-linux.html" class="card-badge">Linux</a>
+
+                      <time class="recent-date" datetime="2026-08-18">18 août 2026</time>
+                    </div>
 
                     <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                      <a href="./articles/securiser-serveur-linux.html" class="link hover-2">Sécuriser un serveur Linux : les contrôles essentiels</a>
                     </h3>
 
                     <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
+                      Un tour d'horizon des contrôles indispensables pour durcir un serveur Linux exposé,
+                      de la gestion des comptes aux services réseau en passant par le pare-feu.
                     </p>
 
                     <div class="card-wrapper">
                       <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
+                        <a href="./blog.html" class="span hover-2"># Linux</a>
 
-                        <a href="#" class="span hover-2"># Lifestyle</a>
+                        <a href="./blog.html" class="span hover-2"># Hardening</a>
                       </div>
 
                       <div class="wrapper">
                         <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                        <span class="span">3 mins read</span>
+                        <span class="span">6 min de lecture</span>
                       </div>
                     </div>
 
@@ -823,34 +424,38 @@
                 <div class="recent-post-card">
 
                   <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/recent-post-2.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                    <img src="./assets/images/recent-burp-suite.jpg" width="271" height="258" loading="lazy"
+                      alt="Burp Suite : guide pratique pour débuter en pentest Web" class="img-cover">
                   </figure>
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
+                    <div class="card-wrapper">
+                      <a href="./articles/burp-suite-guide-pentest-web.html" class="card-badge">Pentest</a>
+
+                      <time class="recent-date" datetime="2026-08-14">14 août 2026</time>
+                    </div>
 
                     <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                      <a href="./articles/burp-suite-guide-pentest-web.html" class="link hover-2">Burp Suite : guide pratique pour débuter en pentest Web</a>
                     </h3>
 
                     <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
+                      Prise en main de Burp Suite : proxy d'interception, repeater et scanner passif pour
+                      commencer à tester la sécurité d'une application Web.
                     </p>
 
                     <div class="card-wrapper">
                       <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
+                        <a href="./blog.html" class="span hover-2"># Pentest</a>
 
-                        <a href="#" class="span hover-2"># Lifestyle</a>
+                        <a href="./blog.html" class="span hover-2"># WebSecurity</a>
                       </div>
 
                       <div class="wrapper">
                         <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                        <span class="span">3 mins read</span>
+                        <span class="span">7 min de lecture</span>
                       </div>
                     </div>
 
@@ -863,34 +468,38 @@
                 <div class="recent-post-card">
 
                   <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/recent-post-3.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                    <img src="./assets/images/recent-iso27001-audit-interne.jpg" width="271" height="258" loading="lazy"
+                      alt="ISO 27001 : comment préparer efficacement un audit interne" class="img-cover">
                   </figure>
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
+                    <div class="card-wrapper">
+                      <a href="./articles/iso27001-audit-interne.html" class="card-badge">GRC</a>
+
+                      <time class="recent-date" datetime="2026-08-09">9 août 2026</time>
+                    </div>
 
                     <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                      <a href="./articles/iso27001-audit-interne.html" class="link hover-2">ISO 27001 : comment préparer efficacement un audit interne</a>
                     </h3>
 
                     <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
+                      Méthodologie, documents à réunir et pièges à éviter pour aborder sereinement un audit
+                      interne dans le cadre d'un SMSI certifié ISO 27001.
                     </p>
 
                     <div class="card-wrapper">
                       <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
+                        <a href="./blog.html" class="span hover-2"># GRC</a>
 
-                        <a href="#" class="span hover-2"># Lifestyle</a>
+                        <a href="./blog.html" class="span hover-2"># ISO27001</a>
                       </div>
 
                       <div class="wrapper">
                         <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                        <span class="span">3 mins read</span>
+                        <span class="span">5 min de lecture</span>
                       </div>
                     </div>
 
@@ -903,74 +512,38 @@
                 <div class="recent-post-card">
 
                   <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/recent-post-4.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
+                    <img src="./assets/images/recent-risque-menace-vulnerabilite.jpg" width="271" height="258" loading="lazy"
+                      alt="Comprendre la différence entre risque, menace et vulnérabilité" class="img-cover">
                   </figure>
 
                   <div class="card-content">
 
-                    <a href="#" class="card-badge">Working Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
-                    </p>
-
                     <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
+                      <a href="./articles/risque-menace-vulnerabilite.html" class="card-badge">Gestion des risques</a>
 
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
+                      <time class="recent-date" datetime="2026-08-03">3 août 2026</time>
                     </div>
 
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/recent-post-5.jpg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Working Tips</a>
-
                     <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">Helpful Tips for Working from Home as a Freelancer</a>
+                      <a href="./articles/risque-menace-vulnerabilite.html" class="link hover-2">Comprendre la différence entre risque, menace et vulnérabilité</a>
                     </h3>
 
                     <p class="card-text">
-                      Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner flapped lynx far that and jeepers giggled far and far
+                      Trois notions souvent confondues mais essentielles pour construire une analyse de
+                      risques rigoureuse et un langage commun avec les métiers.
                     </p>
 
                     <div class="card-wrapper">
                       <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
+                        <a href="./blog.html" class="span hover-2"># RiskManagement</a>
 
-                        <a href="#" class="span hover-2"># Lifestyle</a>
+                        <a href="./blog.html" class="span hover-2"># GRC</a>
                       </div>
 
                       <div class="wrapper">
                         <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
 
-                        <span class="span">3 mins read</span>
+                        <span class="span">4 min de lecture</span>
                       </div>
                     </div>
 
@@ -981,32 +554,15 @@
 
             </ul>
 
-            <nav aria-label="pagination" class="pagination">
-
-              <a href="#" class="pagination-btn" aria-label="previous page">
-                <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-              </a>
-
-              <a href="#" class="pagination-btn">1</a>
-              <a href="#" class="pagination-btn">2</a>
-              <a href="#" class="pagination-btn">3</a>
-              <a href="#" class="pagination-btn" aria-label="more page">...</a>
-
-              <a href="#" class="pagination-btn" aria-label="next page">
-                <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-              </a>
-
-            </nav>
-
           </div>
 
           <div class="post-aside grid-list">
 
             <div class="card aside-card">
 
-              <h3 class="headline headline-2 aside-title">
-                <span class="span">Popular Posts</span>
-              </h3>
+              <h2 class="headline headline-2 aside-title" id="popular-label">
+                <span class="span">Articles populaires</span>
+              </h2>
 
               <ul class="popular-list">
 
@@ -1014,20 +570,20 @@
                   <div class="popular-card">
 
                     <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-1.jpg" width="64" height="64" loading="lazy"
-                        alt="Creating is a privilege but it’s also a gift" class="img-cover">
+                      <img src="./assets/images/popular-owasp-top10.jpg" width="64" height="64" loading="lazy"
+                        alt="OWASP Top 10 : comprendre les principales vulnérabilités Web" class="img-cover">
                     </figure>
 
                     <div class="card-content">
 
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Creating is a privilege but it’s also a gift</a>
-                      </h4>
+                      <h3 class="headline headline-4 card-title">
+                        <a href="./articles/owasp-top10-vulnerabilites-web.html" class="link hover-2">OWASP Top 10 : comprendre les principales vulnérabilités Web</a>
+                      </h3>
 
                       <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
+                        <p class="card-subtitle">6 min de lecture</p>
 
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                        <time class="publish-date" datetime="2026-07-20">20 juillet 2026</time>
                       </div>
 
                     </div>
@@ -1039,20 +595,20 @@
                   <div class="popular-card">
 
                     <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-2.jpg" width="64" height="64" loading="lazy"
-                        alt="Being unique is better than being perfect" class="img-cover">
+                      <img src="./assets/images/popular-iso27001-smsi.jpg" width="64" height="64" loading="lazy"
+                        alt="ISO 27001 : les étapes essentielles pour structurer un SMSI" class="img-cover">
                     </figure>
 
                     <div class="card-content">
 
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Being unique is better than being perfect</a>
-                      </h4>
+                      <h3 class="headline headline-4 card-title">
+                        <a href="./articles/iso27001-smsi-etapes.html" class="link hover-2">ISO 27001 : les étapes essentielles pour structurer un SMSI</a>
+                      </h3>
 
                       <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
+                        <p class="card-subtitle">7 min de lecture</p>
 
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                        <time class="publish-date" datetime="2026-08-12">12 août 2026</time>
                       </div>
 
                     </div>
@@ -1064,20 +620,20 @@
                   <div class="popular-card">
 
                     <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-3.jpg" width="64" height="64" loading="lazy"
-                        alt="Every day, in every city and town across the country" class="img-cover">
+                      <img src="./assets/images/popular-audit-lynis.jpg" width="64" height="64" loading="lazy"
+                        alt="Audit Linux avec Lynis : guide pratique" class="img-cover">
                     </figure>
 
                     <div class="card-content">
 
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Every day, in every city and town across the country</a>
-                      </h4>
+                      <h3 class="headline headline-4 card-title">
+                        <a href="./articles/audit-linux-lynis.html" class="link hover-2">Audit Linux avec Lynis : guide pratique</a>
+                      </h3>
 
                       <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
+                        <p class="card-subtitle">8 min de lecture</p>
 
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                        <time class="publish-date" datetime="2026-07-29">29 juillet 2026</time>
                       </div>
 
                     </div>
@@ -1089,45 +645,20 @@
                   <div class="popular-card">
 
                     <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-4.jpg" width="64" height="64" loading="lazy"
-                        alt="Your voice, your mind, your story, your vision" class="img-cover">
+                      <img src="./assets/images/popular-analyse-risques.jpg" width="64" height="64" loading="lazy"
+                        alt="Comment réaliser une analyse de risques cybersécurité ?" class="img-cover">
                     </figure>
 
                     <div class="card-content">
 
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Your voice, your mind, your story, your vision</a>
-                      </h4>
+                      <h3 class="headline headline-4 card-title">
+                        <a href="./articles/analyse-risques-cybersecurite.html" class="link hover-2">Comment réaliser une analyse de risques cybersécurité ?</a>
+                      </h3>
 
                       <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
+                        <p class="card-subtitle">6 min de lecture</p>
 
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-2.jpg" width="64" height="64" loading="lazy"
-                        alt="Being unique is better than being perfect" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="#" class="link hover-2">Being unique is better than being perfect</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">15 April 2022</time>
+                        <time class="publish-date" datetime="2026-08-05">5 août 2026</time>
                       </div>
 
                     </div>
@@ -1139,168 +670,193 @@
 
             </div>
 
-            <div class="card aside-card">
+            <div class="card aside-card" id="newsletter">
 
-              <h3 class="headline headline-2 aside-title">
-                <span class="span">Last Comment</span>
-              </h3>
-
-              <ul class="comment-list">
-
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="./assets/images/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Jane Cooper</p>
-
-                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="./assets/images/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Katen Doe</p>
-
-                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard
-                      roadrunner “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="./assets/images/author-8.png" width="32" height="32" loading="lazy"
-                          alt="Barbara Cartland">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Barbara Cartland</p>
-
-                        <time class="card-date" datetime="2022-04-15">15 April 2022</time>
-                      </div>
-                    </div>
-
-                  </div>
-                </li>
-
-              </ul>
-
-            </div>
-
-            <div class="card aside-card insta-card">
-
-              <a href="#" class="logo">
-                <img src="./assets/images/logo.svg" width="119" height="37" loading="lazy" alt="Edu logo">
-              </a>
+              <h2 class="headline headline-2 aside-title" id="newsletter-label">
+                <span class="span">Recevez les prochains articles</span>
+              </h2>
 
               <p class="card-text">
-                Follow us on instagram
+                Abonnez-vous pour recevoir les nouvelles analyses, guides et ressources autour de la
+                cybersécurité, de la GRC et de la sécurité technique.
               </p>
 
-              <ul class="insta-list">
+              <!-- Formulaire connecté à Brevo (ex-Sendinblue) -->
+              <form id="sib-form" method="POST"
+                action="https://0311446a.sibforms.com/serve/MUIFAGFxCLfyhJ_ZWQrVUx6QQsayou6iu4DGwCZxQC8n39pbr4mmgUM_gkzzWTQaAQyW5UkumqZ9W9lNH7H-tnTR4L5AVbM4Q96HJMypVuJpIZTTiVuJaKUje2YrHiYQdBam-eJvcPpdBdR6u7xsMPglAAKvxNvmrATvcLB6ygAzcgv4jwl7d-R16RvU1HrCUG-_FODhk5iD5ukhIg=="
+                data-type="subscription" class="newsletter-form" data-newsletter-form>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-1.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
+                <div class="input-wrapper">
+                  <input type="email" name="EMAIL" placeholder="Votre adresse email" required
+                    class="input-field" autocomplete="email">
+                </div>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-2.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
+                <button type="submit" class="btn btn-primary">
+                  <span class="span">S'abonner</span>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-3.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
+                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+                </button>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-4.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
+              </form>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-5.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-6.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-7.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-8.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-9.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-              </ul>
+              <p class="newsletter-note" data-newsletter-note
+                data-default-text="Pas de spam. Uniquement les nouveaux articles et ressources utiles.">Pas de spam. Uniquement les nouveaux articles et ressources utiles.</p>
 
             </div>
 
           </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!--
+        - #POPULAR TAGS
+      -->
+
+      <section class="tags" aria-labelledby="tag-label">
+        <div class="container">
+
+          <h2 class="headline headline-2 section-title" id="tag-label">
+            <span class="span">Tags populaires</span>
+          </h2>
+
+          <p class="section-text">
+            Recherchez par mots-clés
+          </p>
+
+          <ul class="grid-list">
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="shield-checkmark-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Cybersécurité</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="briefcase-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">GRC</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="ribbon-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">ISO 27001</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="stats-chart-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">ISO 27005</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="lock-closed-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">RGPD</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="warning-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Risk Management</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="clipboard-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Audit</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="flash-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Pentest</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">OWASP</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="bug-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Burp Suite</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="terminal-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Linux</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Lynis</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="radio-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Nmap</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="pulse-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Wireshark</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="construct-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Hardening</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="cube-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Docker</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="hardware-chip-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Kali Linux</p>
+              </button>
+            </li>
+
+            <li>
+              <button class="card tag-btn">
+                <ion-icon name="alert-circle-outline" aria-hidden="true"></ion-icon>
+                <p class="btn-text">Vulnerability Mgmt</p>
+              </button>
+            </li>
+
+          </ul>
 
         </div>
       </section>
@@ -1312,7 +868,7 @@
 
 
 
-  <!-- 
+  <!--
     - #FOOTER
   -->
 
@@ -1325,76 +881,50 @@
 
           <div class="footer-brand">
 
-            <a href="#" class="logo">
-              <img src="./assets/images/logo.svg" width="119" height="37" loading="lazy" alt="Edu logo">
+            <a href="./index.html" class="logo">
+              <img src="./assets/images/logo.png" width="91" height="37" loading="lazy" alt="Emerick Dushimirimana">
             </a>
 
             <p class="footer-text">
-              When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an
-              unknown prnoto sans took a galley and scrambled it to five centurie.
+              <strong>Emerick Dushimirimana</strong><br>
+              Consultant Cybersécurité &amp; GRC
             </p>
 
-            <p class="footer-list-title">Address</p>
-
-            <address class="footer-text address">
-              123 Main Street <br>
-              New York, NY 10001
-            </address>
+            <p class="footer-text">
+              Analyses, guides et ressources autour de la cybersécurité, de la gouvernance, des risques,
+              de la conformité et de la sécurité opérationnelle.
+            </p>
 
           </div>
 
           <div class="footer-list">
 
-            <p class="footer-list-title">Categories</p>
+            <p class="footer-list-title">Navigation</p>
 
             <ul>
 
               <li>
-                <a href="#" class="footer-link hover-2">Action</a>
+                <a href="./index.html" class="footer-link hover-2">Accueil</a>
               </li>
 
               <li>
-                <a href="#" class="footer-link hover-2">Business</a>
+                <a href="./blog.html" class="footer-link hover-2">Blog</a>
               </li>
 
               <li>
-                <a href="#" class="footer-link hover-2">Adventure</a>
+                <a href="./about.html" class="footer-link hover-2">À propos</a>
               </li>
 
               <li>
-                <a href="#" class="footer-link hover-2">Canada</a>
+                <a href="./mentions-legales.html" class="footer-link hover-2">Mentions légales</a>
               </li>
 
               <li>
-                <a href="#" class="footer-link hover-2">America</a>
+                <a href="./politique-confidentialite.html" class="footer-link hover-2">Politique de confidentialité</a>
               </li>
 
               <li>
-                <a href="#" class="footer-link hover-2">Curiosity</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link hover-2">Animal</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link hover-2">Dental</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link hover-2">Biology</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link hover-2">Design</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link hover-2">Breakfast</a>
-              </li>
-
-              <li>
-                <a href="#" class="footer-link hover-2">Dessert</a>
+                <a href="#" class="footer-link hover-2" data-cookie-manage>Gérer les cookies</a>
               </li>
 
             </ul>
@@ -1403,30 +933,23 @@
 
           <div class="footer-list">
 
-            <p class="footer-list-title">Newsletter</p>
+            <p class="footer-list-title">Réseaux</p>
 
-            <p class="footer-text">
-              Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.
-            </p>
+            <ul>
 
-            <div class="input-wrapper">
-              <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+              <li>
+                <a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="footer-link hover-2">LinkedIn</a>
+              </li>
 
-              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-            </div>
+              <li>
+                <a href="https://github.com/EmerickDushel" class="footer-link hover-2">GitHub</a>
+              </li>
 
-            <div class="input-wrapper">
-              <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
-                autocomplete="off">
+              <li>
+                <a href="mailto:contact@emerickd.com" class="footer-link hover-2">Email</a>
+              </li>
 
-              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-            </div>
-
-            <a href="#" class="btn btn-primary">
-              <span class="span">Subscribe</span>
-
-              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-            </a>
+            </ul>
 
           </div>
 
@@ -1435,21 +958,13 @@
         <div class="footer-bottom">
 
           <p class="copyright">
-            &copy; Developed by <a href="#" class="copyright-link">codewithsadee.</a>
+            &copy; 2026 Emerick Dushimirimana. Tous droits réservés.
           </p>
 
           <ul class="social-list">
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-
-                <span class="span">Twitter</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
+              <a href="https://www.linkedin.com/in/emerick-dushimirimana-b80415236/" class="social-link">
                 <ion-icon name="logo-linkedin"></ion-icon>
 
                 <span class="span">LinkedIn</span>
@@ -1457,10 +972,10 @@
             </li>
 
             <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
+              <a href="https://github.com/EmerickDushel" class="social-link">
+                <ion-icon name="logo-github"></ion-icon>
 
-                <span class="span">Instagram</span>
+                <span class="span">GitHub</span>
               </a>
             </li>
 
@@ -1477,7 +992,7 @@
 
 
 
-  <!-- 
+  <!--
     - #BACK TO TOP
   -->
 
@@ -1489,12 +1004,12 @@
 
 
 
-  <!-- 
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
