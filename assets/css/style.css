@@ -1669,3 +1669,21 @@ body.nav-active { overflow: hidden; }
   }
 
 }
+
+
+
+
+/*-----------------------------------*\
+  #PAGE HEADER CLEARANCE
+\*-----------------------------------*/
+
+/*
+  Le header est en position fixe (~85px de haut) et flotte au-dessus du
+  contenu. La page d'accueil s'en accommode via le padding déjà généreux
+  du hero, mais les pages "simples" (Blog, À propos, articles, mentions
+  légales, confidentialité) n'avaient que le padding standard de
+  .section, insuffisant : leur titre se retrouvait caché sous le header,
+  surtout sur mobile.
+*/
+.post,
+.blog-list { padding-block-start: calc(var(--section-padding) + 60px); }
